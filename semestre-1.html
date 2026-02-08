@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semestre 1 - Fondamentaux des Réseaux</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/semester.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none;">
+                    <span class="terminal-prompt">root@portfolio:~#</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">← Retour au Switch</a></li>
+                <li><a href="index.html#footer">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- VLAN Header -->
+    <section class="vlan-header">
+        <div class="container">
+            <div class="cli-command">
+                <span class="prompt">Switch#</span> show vlan id 10
+            </div>
+            <h1 class="vlan-title">
+                <span class="vlan-badge">VLAN 10</span>
+                Semestre 1 : Fondamentaux des Réseaux
+            </h1>
+            <p class="vlan-description">
+                Premier semestre axé sur les bases essentielles de l'administration système et réseau.
+                Acquisition des compétences fondamentales en Linux, TCP/IP et scripting.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section">
+        <div class="container">
+            <h2 class="section-title">Compétences Acquises</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">🐧</div>
+                    <h3>Administration Linux</h3>
+                    <p>Gestion système, permissions, services</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🌐</div>
+                    <h3>Bases TCP/IP</h3>
+                    <p>Modèle OSI, adressage IPv4/IPv6</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🐍</div>
+                    <h3>Python Scripting</h3>
+                    <p>Automatisation et scripts réseau</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">⚙️</div>
+                    <h3>Cisco IOS</h3>
+                    <p>Configuration équipements réseau</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="cli-text">show interfaces description</span>
+                Les 6 Projets du Semestre
+            </h2>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <a href="semestre-1/projet-1.html" class="project-card">
+                    <div class="project-icon">🖥️</div>
+                    <div class="project-header">
+                        <h3 class="project-title">Configuration DHCP</h3>
+                        <span class="project-badge">Linux</span>
+                    </div>
+                    <p class="project-description">
+                        Mise en place d'un serveur DHCP sous Linux pour l'attribution automatique d'adresses IP.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">ISC DHCP</span>
+                        <span class="tech-tag">Ubuntu</span>
+                        <span class="tech-tag">Networking</span>
+                    </div>
+                    <div class="project-status">
+                        <span class="status-indicator active"></span>
+                        <span>Interface Up</span>
+                    </div>
+                </a>
+
+                <!-- Project 2 -->
+                <a href="semestre-1/projet-2.html" class="project-card">
+                    <div class="project-icon">🐍</div>
+                    <div class="project-header">
+                        <h3 class="project-title">Automatisation Python</h3>
+                        <span class="project-badge">Python</span>
+                    </div>
+                    <p class="project-description">
+                        Scripts Python pour automatiser les tâches d'administration réseau et système.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python 3</span>
+                        <span class="tech-tag">Paramiko</span>
+                        <span class="tech-tag">Automation</span>
+                    </div>
+                    <div class="project-status">
+                        <span class="status-indicator active"></span>
+                        <span>Interface Up</span>
+                    </div>
+                </a>
+
+                <!-- Project 3 -->
+                <a href="semestre-1/projet-3.html" class="project-card">
+                    <div class="project-icon">🔌</div>
+                    <div class="project-header">
+                        <h3 class="project-title">Réseau LAN</h3>
+                        <span class="project-badge">Réseau</span>
+                    </div>
+                    <p class="project-description">
+                        Conception et mise en œuvre d'une infrastructure LAN complète avec switches et routeurs.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Cisco</span>
+                        <span class="tech-tag">Packet Tracer</span>
+                        <span class="tech-tag">Switching</span>
+                    </div>
+                    <div class="project-status">
+                        <span class="status-indicator active"></span>
+                        <span>Interface Up</span>
+                    </div>
+                </a>
+
+                <!-- Project 4 -->
+                <a href="semestre-1/projet-4.html" class="project-card">
+                    <div class="project-icon">📝</div>
+                    <div class="project-header">
+                        <h3 class="project-title">Documentation Réseau</h3>
+                        <span class="project-badge">Documentation</span>
+                    </div>
+                    <p class="project-description">
+                        Création d'une documentation technique complète avec schémas et procédures.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Markdown</span>
+                        <span class="tech-tag">Draw.io</span>
+                        <span class="tech-tag">Git</span>
+                    </div>
+                    <div class="project-status">
+                        <span class="status-indicator active"></span>
+                        <span>Interface Up</span>
+                    </div>
+                </a>
+
+                <!-- Project 5 -->
+                <a href="semestre-1/projet-5.html" class="project-card">
+                    <div class="project-icon">📊</div>
+                    <div class="project-header">
+                        <h3 class="project-title">Monitoring Nagios</h3>
+                        <span class="project-badge">Monitoring</span>
+                    </div>
+                    <p class="project-description">
+                        Déploiement d'une solution de monitoring réseau avec Nagios pour la supervision.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Nagios</span>
+                        <span class="tech-tag">SNMP</span>
+                        <span class="tech-tag">Alerting</span>
+                    </div>
+                    <div class="project-status">
+                        <span class="status-indicator active"></span>
+                        <span>Interface Up</span>
+                    </div>
+                </a>
+
+                <!-- Project 6 -->
+                <a href="semestre-1/projet-6.html" class="project-card">
+                    <div class="project-icon">💻</div>
+                    <div class="project-header">
+                        <h3 class="project-title">Scripts Bash Avancés</h3>
+                        <span class="project-badge">Scripting</span>
+                    </div>
+                    <p class="project-description">
+                        Développement de scripts Bash complexes pour l'administration et la maintenance système.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Bash</span>
+                        <span class="tech-tag">Cron</span>
+                        <span class="tech-tag">Automation</span>
+                    </div>
+                    <div class="project-status">
+                        <span class="status-indicator active"></span>
+                        <span>Interface Up</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Navigation</h3>
+                    <div class="footer-links">
+                        <a href="index.html">← Retour au Switch</a>
+                        <a href="semestre-2.html">Semestre 2 →</a>
+                    </div>
+                </div>
+
+                <div class="footer-section contact-info">
+                    <div class="contact-item">
+                        <span class="icon">📧</span>
+                        <a href="mailto:contact@example.com">contact@example.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">📱</span>
+                        <span>+33 6 XX XX XX XX</span>
+                    </div>
+                </div>
+
+                <div class="footer-section social-links">
+                    <a href="https://github.com" target="_blank" class="social-link">
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" class="social-link">
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Portfolio Network-Centric | Semestre 1 - VLAN 10</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

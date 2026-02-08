@@ -1,0 +1,295 @@
+/* ========================================
+   Semester Page Styles
+   ======================================== */
+
+/* VLAN Header Section */
+.vlan-header {
+    padding: 120px 20px 60px;
+    background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary));
+    border-bottom: 2px solid var(--accent-green);
+}
+
+.cli-command {
+    font-family: 'Fira Code', monospace;
+    color: var(--accent-green);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    padding: 0.8rem 1.2rem;
+    background-color: rgba(15, 23, 42, 0.6);
+    border-left: 3px solid var(--accent-green);
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.prompt {
+    color: var(--text-primary);
+    margin-right: 0.5rem;
+}
+
+.vlan-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.vlan-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--accent-green);
+    color: var(--bg-primary);
+    font-family: 'Fira Code', monospace;
+    font-size: 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.vlan-description {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 800px;
+    line-height: 1.8;
+}
+
+/* Skills Section */
+.skills-section {
+    padding: 60px 20px;
+    background-color: var(--bg-primary);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: var(--text-primary);
+}
+
+.section-title .cli-text {
+    display: block;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    color: var(--accent-green);
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skill-card {
+    background-color: var(--bg-secondary);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-green);
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.2);
+}
+
+.skill-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.skill-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.skill-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+/* Projects Section */
+.projects-section {
+    padding: 60px 20px;
+    background-color: var(--bg-secondary);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background-color: var(--bg-primary);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background-color: var(--accent-green);
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover::before {
+    transform: scaleY(1);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-green);
+    box-shadow: 0 10px 30px rgba(16, 185, 129, 0.2);
+}
+
+.project-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.project-title {
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.project-badge {
+    padding: 0.3rem 0.8rem;
+    background-color: var(--bg-tertiary);
+    color: var(--accent-green);
+    font-size: 0.75rem;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.project-description {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-tag {
+    padding: 0.3rem 0.8rem;
+    background-color: var(--bg-secondary);
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    font-family: 'Fira Code', monospace;
+}
+
+.project-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.status-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--led-inactive);
+}
+
+.status-indicator.active {
+    background-color: var(--led-active);
+    box-shadow: 0 0 10px var(--led-active);
+    animation: pulse 2s infinite;
+}
+
+/* Footer Links */
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.footer-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+.footer-links a:hover {
+    color: var(--accent-green);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .vlan-title {
+        font-size: 1.8rem;
+    }
+
+    .vlan-badge {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .vlan-header {
+        padding: 100px 20px 40px;
+    }
+
+    .vlan-title {
+        font-size: 1.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .project-header {
+        flex-direction: column;
+    }
+}
