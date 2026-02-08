@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Semestre 1 - Fondamentaux des Réseaux</title>
+    <title>Semestre 3 - Sécurité & Services</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/semester.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
@@ -28,15 +28,15 @@
     <section class="vlan-header">
         <div class="container">
             <div class="vlan-cli-header">
-                <span class="prompt">Switch#</span> show vlan id 10
+                <span class="prompt">Switch#</span> show vlan id 30
             </div>
             <h1 class="vlan-title">
-                <span class="vlan-badge">VLAN 10</span>
-                Semestre 1 : Fondamentaux des Réseaux
+                <span class="vlan-badge">VLAN 30</span>
+                Semestre 3 : Sécurité & Services
             </h1>
             <p class="vlan-description">
-                Premier semestre axé sur les bases essentielles de l'administration système et réseau.
-                Acquisition des compétences fondamentales en Linux, TCP/IP et scripting.
+                Troisième semestre centré sur la sécurité réseau et les services d'infrastructure.
+                Déploiement de pare-feu, VPN et services sécurisés.
             </p>
         </div>
     </section>
@@ -47,24 +47,24 @@
             <h2 class="section-title">Compétences Acquises</h2>
             <div class="skills-grid">
                 <div class="skill-card">
-                    <div class="skill-icon">🐧</div>
-                    <h3>Administration Linux</h3>
-                    <p>Gestion système, permissions, services</p>
+                    <div class="skill-icon">🛡️</div>
+                    <h3>Firewall Configuration</h3>
+                    <p>pfSense, iptables, ACLs</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🔐</div>
+                    <h3>VPN</h3>
+                    <p>IPSec, OpenVPN, site-to-site</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">🌐</div>
-                    <h3>Bases TCP/IP</h3>
-                    <p>Modèle OSI, adressage IPv4/IPv6</p>
+                    <h3>Services Web</h3>
+                    <p>Apache, Nginx, reverse proxy</p>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon">🐍</div>
-                    <h3>Python Scripting</h3>
-                    <p>Automatisation et scripts réseau</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">⚙️</div>
-                    <h3>Cisco IOS</h3>
-                    <p>Configuration équipements réseau</p>
+                    <div class="skill-icon">🔒</div>
+                    <h3>Sécurité réseau</h3>
+                    <p>IDS/IPS, SSL/TLS, hardening</p>
                 </div>
             </div>
         </div>
@@ -80,19 +80,19 @@
             
             <div class="projects-grid">
                 <!-- Project 1 -->
-                <a href="semestre-1/projet-1.html" class="project-card">
-                    <div class="project-icon">🖥️</div>
+                <a href="semestre-3/projet-1.html" class="project-card">
+                    <div class="project-icon">🛡️</div>
                     <div class="project-header">
-                        <h3 class="project-title">Configuration DHCP</h3>
-                        <span class="project-badge">Linux</span>
+                        <h3 class="project-title">Déploiement pfSense</h3>
+                        <span class="project-badge">Firewall</span>
                     </div>
                     <p class="project-description">
-                        Mise en place d'un serveur DHCP sous Linux pour l'attribution automatique d'adresses IP.
+                        Installation et configuration d'un pare-feu pfSense pour sécuriser l'infrastructure réseau.
                     </p>
                     <div class="project-tech">
-                        <span class="tech-tag">ISC DHCP</span>
-                        <span class="tech-tag">Ubuntu</span>
-                        <span class="tech-tag">Networking</span>
+                        <span class="tech-tag">pfSense</span>
+                        <span class="tech-tag">Firewall</span>
+                        <span class="tech-tag">NAT</span>
                     </div>
                     <div class="project-status">
                         <span class="status-indicator active"></span>
@@ -101,19 +101,19 @@
                 </a>
 
                 <!-- Project 2 -->
-                <a href="semestre-1/projet-2.html" class="project-card">
-                    <div class="project-icon">🐍</div>
+                <a href="semestre-3/projet-2.html" class="project-card">
+                    <div class="project-icon">🔐</div>
                     <div class="project-header">
-                        <h3 class="project-title">Automatisation Python</h3>
-                        <span class="project-badge">Python</span>
+                        <h3 class="project-title">Configuration VPN site-to-site</h3>
+                        <span class="project-badge">VPN</span>
                     </div>
                     <p class="project-description">
-                        Scripts Python pour automatiser les tâches d'administration réseau et système.
+                        Mise en place de tunnels VPN IPSec pour interconnecter des sites distants de manière sécurisée.
                     </p>
                     <div class="project-tech">
-                        <span class="tech-tag">Python 3</span>
-                        <span class="tech-tag">Paramiko</span>
-                        <span class="tech-tag">Automation</span>
+                        <span class="tech-tag">IPSec</span>
+                        <span class="tech-tag">OpenVPN</span>
+                        <span class="tech-tag">Tunneling</span>
                     </div>
                     <div class="project-status">
                         <span class="status-indicator active"></span>
@@ -122,19 +122,19 @@
                 </a>
 
                 <!-- Project 3 -->
-                <a href="semestre-1/projet-3.html" class="project-card">
-                    <div class="project-icon">🔌</div>
+                <a href="semestre-3/projet-3.html" class="project-card">
+                    <div class="project-icon">🌐</div>
                     <div class="project-header">
-                        <h3 class="project-title">Réseau LAN</h3>
-                        <span class="project-badge">Réseau</span>
+                        <h3 class="project-title">Serveur Web Apache/Nginx</h3>
+                        <span class="project-badge">Web Services</span>
                     </div>
                     <p class="project-description">
-                        Conception et mise en œuvre d'une infrastructure LAN complète avec switches et routeurs.
+                        Déploiement et optimisation de serveurs web avec hébergement virtuel et reverse proxy.
                     </p>
                     <div class="project-tech">
-                        <span class="tech-tag">Cisco</span>
-                        <span class="tech-tag">Packet Tracer</span>
-                        <span class="tech-tag">Switching</span>
+                        <span class="tech-tag">Apache</span>
+                        <span class="tech-tag">Nginx</span>
+                        <span class="tech-tag">Reverse Proxy</span>
                     </div>
                     <div class="project-status">
                         <span class="status-indicator active"></span>
@@ -143,19 +143,19 @@
                 </a>
 
                 <!-- Project 4 -->
-                <a href="semestre-1/projet-4.html" class="project-card">
-                    <div class="project-icon">📝</div>
+                <a href="semestre-3/projet-4.html" class="project-card">
+                    <div class="project-icon">🔒</div>
                     <div class="project-header">
-                        <h3 class="project-title">Documentation Réseau</h3>
-                        <span class="project-badge">Documentation</span>
+                        <h3 class="project-title">Certificats SSL/TLS</h3>
+                        <span class="project-badge">Cryptographie</span>
                     </div>
                     <p class="project-description">
-                        Création d'une documentation technique complète avec schémas et procédures.
+                        Génération et gestion de certificats SSL/TLS pour sécuriser les communications web.
                     </p>
                     <div class="project-tech">
-                        <span class="tech-tag">Markdown</span>
-                        <span class="tech-tag">Draw.io</span>
-                        <span class="tech-tag">Git</span>
+                        <span class="tech-tag">OpenSSL</span>
+                        <span class="tech-tag">Let's Encrypt</span>
+                        <span class="tech-tag">HTTPS</span>
                     </div>
                     <div class="project-status">
                         <span class="status-indicator active"></span>
@@ -164,19 +164,19 @@
                 </a>
 
                 <!-- Project 5 -->
-                <a href="semestre-1/projet-5.html" class="project-card">
-                    <div class="project-icon">📊</div>
+                <a href="semestre-3/projet-5.html" class="project-card">
+                    <div class="project-icon">🚨</div>
                     <div class="project-header">
-                        <h3 class="project-title">Monitoring Nagios</h3>
-                        <span class="project-badge">Monitoring</span>
+                        <h3 class="project-title">IDS/IPS avec Snort</h3>
+                        <span class="project-badge">Security</span>
                     </div>
                     <p class="project-description">
-                        Déploiement d'une solution de monitoring réseau avec Nagios pour la supervision.
+                        Mise en place d'un système de détection et prévention d'intrusion avec Snort.
                     </p>
                     <div class="project-tech">
-                        <span class="tech-tag">Nagios</span>
-                        <span class="tech-tag">SNMP</span>
-                        <span class="tech-tag">Alerting</span>
+                        <span class="tech-tag">Snort</span>
+                        <span class="tech-tag">IDS/IPS</span>
+                        <span class="tech-tag">Security Monitoring</span>
                     </div>
                     <div class="project-status">
                         <span class="status-indicator active"></span>
@@ -185,19 +185,19 @@
                 </a>
 
                 <!-- Project 6 -->
-                <a href="semestre-1/projet-6.html" class="project-card">
-                    <div class="project-icon">💻</div>
+                <a href="semestre-3/projet-6.html" class="project-card">
+                    <div class="project-icon">🔧</div>
                     <div class="project-header">
-                        <h3 class="project-title">Scripts Bash Avancés</h3>
-                        <span class="project-badge">Scripting</span>
+                        <h3 class="project-title">Hardening Linux</h3>
+                        <span class="project-badge">System Security</span>
                     </div>
                     <p class="project-description">
-                        Développement de scripts Bash complexes pour l'administration et la maintenance système.
+                        Durcissement de serveurs Linux selon les meilleures pratiques de sécurité.
                     </p>
                     <div class="project-tech">
-                        <span class="tech-tag">Bash</span>
-                        <span class="tech-tag">Cron</span>
-                        <span class="tech-tag">Automation</span>
+                        <span class="tech-tag">SELinux</span>
+                        <span class="tech-tag">AppArmor</span>
+                        <span class="tech-tag">Fail2ban</span>
                     </div>
                     <div class="project-status">
                         <span class="status-indicator active"></span>
@@ -215,8 +215,9 @@
                 <div class="footer-section">
                     <h3 class="footer-title">Navigation</h3>
                     <div class="footer-links">
+                        <a href="semestre-2.html">← Semestre 2</a>
                         <a href="index.html">Retour au Switch</a>
-                        <a href="semestre-2.html">Semestre 2 →</a>
+                        <a href="semestre-4.html">Semestre 4 →</a>
                     </div>
                 </div>
 
@@ -242,7 +243,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 Portfolio Network-Centric | Semestre 1 - VLAN 10</p>
+                <p>&copy; 2026 Portfolio Network-Centric | Semestre 3 - VLAN 30</p>
             </div>
         </div>
     </footer>

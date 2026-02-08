@@ -9,7 +9,7 @@
     border-bottom: 2px solid var(--accent-green);
 }
 
-.cli-command {
+.vlan-cli-header {
     font-family: 'Fira Code', monospace;
     color: var(--accent-green);
     font-size: 0.95rem;

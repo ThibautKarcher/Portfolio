@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const cliWindow = document.getElementById('cliWindow');
     const cliContent = document.getElementById('cliContent');
     const cliClose = document.querySelector('.cli-close');
+    const cliTransition = document.getElementById('cliTransition');
+    const cliTransitionContent = document.getElementById('cliTransitionContent');
     
     // Semester data
     const semesterData = {
@@ -21,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         2: {
-            vlan: 10,
+            vlan: 20,
             title: "Semestre 2 : Routage & Commutation",
             skills: ["VLAN Configuration", "Routage Statique/Dynamique", "Spanning Tree", "EtherChannel"],
             projects: [
@@ -34,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         3: {
-            vlan: 20,
+            vlan: 30,
             title: "Semestre 3 : Sécurité & Services",
             skills: ["Firewall Configuration", "VPN", "Services Web", "Sécurité réseau"],
             projects: [
@@ -47,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         4: {
-            vlan: 20,
+            vlan: 40,
             title: "Semestre 4 : Systèmes & Virtualisation",
             skills: ["Virtualisation", "Docker", "Kubernetes", "Active Directory"],
             projects: [
@@ -60,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         5: {
-            vlan: 30,
+            vlan: 50,
             title: "Semestre 5 : Cloud & DevOps",
             skills: ["AWS/Azure", "Infrastructure as Code", "Monitoring", "High Availability"],
             projects: [
@@ -111,6 +113,63 @@ document.addEventListener('DOMContentLoaded', () => {
         cliWindow.classList.remove('active');
     }
     
+    // CLI Transition Animation
+    function startCLITransition(semester, portNumber) {
+        // Show overlay
+        cliTransition.classList.add('active');
+        
+        // CLI commands sequence - only 3 lines
+        const commands = [
+            { prompt: 'Switch>', command: 'enable', delay: 400 },
+            { prompt: 'Switch#', command: 'configure terminal', delay: 500 },
+            { prompt: 'Switch(config)#', command: `interface GigabitEthernet0/${portNumber}`, delay: 600 }
+        ];
+        
+        cliTransitionContent.innerHTML = '';
+        
+        function typeCommand(index) {
+            if (index >= commands.length) {
+                // Animation complete, redirect after a short delay
+                setTimeout(() => {
+                    window.location.href = `semestre-${semester}.html`;
+                }, 600);
+                return;
+            }
+            
+            const cmd = commands[index];
+            const line = document.createElement('div');
+            line.className = 'cli-line';
+            
+            const commandText = cmd.command || '';
+            const promptSpan = document.createElement('span');
+            promptSpan.className = 'cli-prompt';
+            promptSpan.textContent = cmd.prompt + ' ';
+            line.appendChild(promptSpan);
+            
+            const commandSpan = document.createElement('span');
+            commandSpan.className = 'cli-command';
+            line.appendChild(commandSpan);
+            
+            cliTransitionContent.appendChild(line);
+            cliTransitionContent.scrollTop = cliTransitionContent.scrollHeight;
+            
+            // Animate typing effect character by character
+            let charIndex = 0;
+            const typeInterval = setInterval(() => {
+                if (charIndex < commandText.length) {
+                    commandSpan.textContent = commandText.substring(0, charIndex + 1);
+                    charIndex++;
+                } else {
+                    clearInterval(typeInterval);
+                    setTimeout(() => typeCommand(index + 1), cmd.delay);
+                }
+            }, 50); // Slower typing for better effect
+        }
+        
+        // Start typing animation
+        setTimeout(() => typeCommand(0), 300);
+    }
+    
     // Add event listeners to ports
     ports.forEach(port => {
         const semester = parseInt(port.dataset.semester);
@@ -132,7 +191,8 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             
             port.addEventListener('click', () => {
-                window.location.href = `semestre-${semester}.html`;
+                const portNumber = port.querySelector('.port-number').textContent.replace('Gi0/', '');
+                startCLITransition(semester, portNumber);
             });
         }
     });

@@ -624,6 +624,116 @@ body {
 }
 
 /* ========================================
+   CLI Transition Overlay
+   ======================================== */
+.cli-transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 23, 42, 0.98);
+    backdrop-filter: blur(10px);
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.cli-transition-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+.cli-transition-window {
+    width: 90%;
+    max-width: 800px;
+    background-color: var(--bg-secondary);
+    border: 2px solid var(--accent-green);
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.cli-transition-header {
+    background-color: var(--accent-green);
+    color: var(--bg-primary);
+    padding: 0.8rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-family: 'Fira Code', monospace;
+    font-weight: 600;
+}
+
+.terminal-icon {
+    font-size: 1.2rem;
+}
+
+.cli-transition-content {
+    padding: 2rem;
+    background-color: #0a0e1a;
+    min-height: 120px;
+    max-height: 400px;
+    overflow-y: auto;
+    font-family: 'Fira Code', monospace;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.cli-line {
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.cli-prompt {
+    color: var(--accent-green);
+    font-weight: 600;
+}
+
+.cli-command {
+    color: #60A5FA;
+}
+
+.cli-output {
+    color: var(--text-muted);
+    margin-left: 1rem;
+}
+
+.cli-success {
+    color: var(--accent-green);
+}
+
+.cli-cursor {
+    display: inline-block;
+    width: 10px;
+    height: 18px;
+    background-color: var(--accent-green);
+    margin-left: 2px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* ========================================
    Responsive Design
    ======================================== */
 @media (max-width: 768px) {

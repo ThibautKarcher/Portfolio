@@ -75,85 +75,85 @@
 
                         <!-- Semestre 2 -->
                         <div class="port-group">
-                            <div class="port" data-vlan="10" data-semester="2">
+                            <div class="port" data-vlan="20" data-semester="2">
                                 <div class="led green" id="led-2"></div>
                                 <div class="rj45-connector">
                                     <div class="rj45-pins"></div>
                                 </div>
                                 <div class="port-number">Gi0/2</div>
-                                <div class="port-label">VLAN 10</div>
+                                <div class="port-label">VLAN 20</div>
                             </div>
                         </div>
 
                         <!-- Semestre 3 -->
                         <div class="port-group">
-                            <div class="port" data-vlan="20" data-semester="3">
+                            <div class="port" data-vlan="30" data-semester="3">
                                 <div class="led green" id="led-3"></div>
                                 <div class="rj45-connector">
                                     <div class="rj45-pins"></div>
                                 </div>
                                 <div class="port-number">Gi0/3</div>
-                                <div class="port-label">VLAN 20</div>
+                                <div class="port-label">VLAN 30</div>
                             </div>
                         </div>
 
                         <!-- Semestre 4 -->
                         <div class="port-group">
-                            <div class="port" data-vlan="20" data-semester="4">
+                            <div class="port" data-vlan="40" data-semester="4">
                                 <div class="led green" id="led-4"></div>
                                 <div class="rj45-connector">
                                     <div class="rj45-pins"></div>
                                 </div>
                                 <div class="port-number">Gi0/4</div>
-                                <div class="port-label">VLAN 20</div>
+                                <div class="port-label">VLAN 40</div>
                             </div>
                         </div>
 
                         <!-- Semestre 5 -->
                         <div class="port-group">
-                            <div class="port" data-vlan="30" data-semester="5">
+                            <div class="port" data-vlan="50" data-semester="5">
                                 <div class="led green" id="led-5"></div>
                                 <div class="rj45-connector">
                                     <div class="rj45-pins"></div>
                                 </div>
                                 <div class="port-number">Gi0/5</div>
-                                <div class="port-label">VLAN 30</div>
+                                <div class="port-label">VLAN 50</div>
                             </div>
                         </div>
 
                         <!-- Semestre 6 -->
                         <div class="port-group">
-                            <div class="port disabled" data-vlan="30" data-semester="6">
+                            <div class="port disabled" data-vlan="60" data-semester="6">
                                 <div class="led gray" id="led-6"></div>
                                 <div class="rj45-connector">
                                     <div class="rj45-pins"></div>
                                 </div>
                                 <div class="port-number">Gi0/6</div>
-                                <div class="port-label">VLAN 30</div>
+                                <div class="port-label">VLAN 60</div>
                             </div>
                         </div>
 
                         <!-- Semestre 7 -->
                         <div class="port-group">
-                            <div class="port disabled" data-vlan="40" data-semester="7">
+                            <div class="port disabled" data-vlan="70" data-semester="7">
                                 <div class="led gray" id="led-7"></div>
                                 <div class="rj45-connector">
                                     <div class="rj45-pins"></div>
                                 </div>
                                 <div class="port-number">Gi0/7</div>
-                                <div class="port-label">VLAN 40</div>
+                                <div class="port-label">VLAN 70</div>
                             </div>
                         </div>
 
                         <!-- Semestre 8 -->
                         <div class="port-group">
-                            <div class="port disabled" data-vlan="40" data-semester="8">
+                            <div class="port disabled" data-vlan="80" data-semester="8">
                                 <div class="led gray" id="led-8"></div>
                                 <div class="rj45-connector">
                                     <div class="rj45-pins"></div>
                                 </div>
                                 <div class="port-number">Gi0/8</div>
-                                <div class="port-label">VLAN 40</div>
+                                <div class="port-label">VLAN 80</div>
                             </div>
                         </div>
                     </div>
@@ -220,6 +220,22 @@
             </div>
         </div>
     </footer>
+
+    <!-- CLI Transition Overlay -->
+    <div class="cli-transition-overlay" id="cliTransition">
+        <div class="cli-transition-window">
+            <div class="cli-transition-header">
+                <span class="terminal-icon">▶</span>
+                <span class="terminal-title">Cisco IOS CLI</span>
+            </div>
+            <div class="cli-transition-content" id="cliTransitionContent">
+                <div class="cli-line">
+                    <span class="cli-prompt">Switch></span>
+                    <span class="cli-cursor"></span>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="scripts/particles.js"></script>
     <script src="scripts/switch.js"></script>
