@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         2: {
-            vlan: 20,
+            vlan: 10,
             title: "Semestre 2 : Routage & Commutation",
             skills: ["VLAN Configuration", "Routage Statique/Dynamique", "Spanning Tree", "EtherChannel"],
             projects: [
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         3: {
-            vlan: 30,
+            vlan: 20,
             title: "Semestre 3 : Sécurité & Services",
             skills: ["Firewall Configuration", "VPN", "Services Web", "Sécurité réseau"],
             projects: [
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         4: {
-            vlan: 40,
+            vlan: 20,
             title: "Semestre 4 : Systèmes & Virtualisation",
             skills: ["Virtualisation", "Docker", "Kubernetes", "Active Directory"],
             projects: [
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         5: {
-            vlan: 50,
+            vlan: 30,
             title: "Semestre 5 : Cloud & DevOps",
             skills: ["AWS/Azure", "Infrastructure as Code", "Monitoring", "High Availability"],
             projects: [
@@ -113,24 +113,28 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Add event listeners to ports
     ports.forEach(port => {
-        port.addEventListener('mouseenter', () => {
-            const semester = parseInt(port.dataset.semester);
-            showCLI(semester);
-        });
+        const semester = parseInt(port.dataset.semester);
+        const isDisabled = port.classList.contains('disabled');
         
-        port.addEventListener('mouseleave', () => {
-            // Small delay before hiding to allow moving to CLI window
-            setTimeout(() => {
-                if (!cliWindow.matches(':hover') && !port.matches(':hover')) {
-                    hideCLI();
-                }
-            }, 100);
-        });
-        
-        port.addEventListener('click', () => {
-            const semester = parseInt(port.dataset.semester);
-            window.location.href = `semestre-${semester}.html`;
-        });
+        // Only enable hover and click for active semesters (1-5)
+        if (!isDisabled) {
+            port.addEventListener('mouseenter', () => {
+                showCLI(semester);
+            });
+            
+            port.addEventListener('mouseleave', () => {
+                // Small delay before hiding to allow moving to CLI window
+                setTimeout(() => {
+                    if (!cliWindow.matches(':hover') && !port.matches(':hover')) {
+                        hideCLI();
+                    }
+                }, 100);
+            });
+            
+            port.addEventListener('click', () => {
+                window.location.href = `semestre-${semester}.html`;
+            });
+        }
     });
     
     // Keep CLI window open when hovering over it
