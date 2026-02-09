@@ -120,9 +120,9 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // CLI commands sequence - only 3 lines
         const commands = [
-            { prompt: 'Switch>', command: 'enable', delay: 200 },
-            { prompt: 'Switch#', command: 'configure terminal', delay: 250 },
-            { prompt: 'Switch(config)#', command: `interface GigabitEthernet0/${portNumber}`, delay: 200 }
+            { prompt: 'Switch>', command: 'enable', delay: 130 },
+            { prompt: 'Switch#', command: 'configure terminal', delay: 165 },
+            { prompt: 'Switch(config)#', command: `interface GigabitEthernet0/${portNumber}`, delay: 130 }
         ];
         
         cliTransitionContent.innerHTML = '';
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Animation complete, redirect after a short delay
                 setTimeout(() => {
                     window.location.href = `./pages/semestre_${semester}/semestre-${semester}.html`;
-                }, 600);
+                }, 400);
                 return;
             }
             
@@ -163,11 +163,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     clearInterval(typeInterval);
                     setTimeout(() => typeCommand(index + 1), cmd.delay);
                 }
-            }, 50); // Slower typing for better effect
+            }, 33); // Faster typing
         }
         
         // Start typing animation
-        setTimeout(() => typeCommand(0), 300);
+        setTimeout(() => typeCommand(0), 200);
     }
     
     // Add event listeners to ports

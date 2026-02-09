@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // CLI commands sequence for changing interface
         const commands = [
-            { prompt: 'Switch(config-if)#', command: 'exit', delay: 200 },
-            { prompt: 'Switch(config)#', command: `interface GigabitEthernet0/${targetSemester}`, delay: 300 }
+            { prompt: 'Switch(config-if)#', command: 'exit', delay: 130 },
+            { prompt: 'Switch(config)#', command: `interface GigabitEthernet0/${targetSemester}`, delay: 200 }
         ];
         
         cliTransitionContent.innerHTML = '';
@@ -52,11 +52,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     clearInterval(typeInterval);
                     setTimeout(() => typeCommand(index + 1), cmd.delay);
                 }
-            }, 50); // Slower typing for better effect
+            }, 33); // Faster typing
         }
         
         // Start typing animation
-        setTimeout(() => typeCommand(0), 300);
+        setTimeout(() => typeCommand(0), 200);
     }
     
     // Function to return to switch (main page)
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // CLI command for exiting
         const commands = [
-            { prompt: 'Switch(config-if)#', command: 'end', delay: 200 }
+            { prompt: 'Switch(config-if)#', command: 'end', delay: 130 }
         ];
         
         cliTransitionContent.innerHTML = '';
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Animation complete, redirect after a short delay
                 setTimeout(() => {
                     window.location.href = targetUrl;
-                }, 600);
+                }, 400);
                 return;
             }
             
@@ -107,15 +107,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     clearInterval(typeInterval);
                     setTimeout(() => typeCommand(index + 1), cmd.delay);
                 }
-            }, 50); // Slower typing for better effect
+            }, 33); // Faster typing
         }
         
         // Start typing animation
-        setTimeout(() => typeCommand(0), 300);
+        setTimeout(() => typeCommand(0), 200);
     }
     
     // Add event listeners to semester navigation links
-    const semesterLinks = document.querySelectorAll('a[href^="semestre-"]');
+    const semesterLinks = document.querySelectorAll('a[href*="semestre"]');
     semesterLinks.forEach(link => {
         const href = link.getAttribute('href');
         const match = href.match(/semestre-(\d+)\.html/);
@@ -130,11 +130,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     // Add event listeners to "Retour au Switch" links
-    const switchLinks = document.querySelectorAll('a[href="index.html"]');
+    const switchLinks = document.querySelectorAll('a[href*="index.html"]');
     switchLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            returnToSwitch('index.html');
-        });
+        const text = link.textContent.toLowerCase();
+        // Only apply transition if link text contains "retour" or "switch"
+        if (text.includes('retour') || text.includes('switch')) {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const href = link.getAttribute('href');
+                returnToSwitch(href);
+            });
+        }
     });
 });
