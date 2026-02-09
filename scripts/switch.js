@@ -120,9 +120,9 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // CLI commands sequence - only 3 lines
         const commands = [
-            { prompt: 'Switch>', command: 'enable', delay: 400 },
-            { prompt: 'Switch#', command: 'configure terminal', delay: 500 },
-            { prompt: 'Switch(config)#', command: `interface GigabitEthernet0/${portNumber}`, delay: 600 }
+            { prompt: 'Switch>', command: 'enable', delay: 200 },
+            { prompt: 'Switch#', command: 'configure terminal', delay: 250 },
+            { prompt: 'Switch(config)#', command: `interface GigabitEthernet0/${portNumber}`, delay: 200 }
         ];
         
         cliTransitionContent.innerHTML = '';
@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (index >= commands.length) {
                 // Animation complete, redirect after a short delay
                 setTimeout(() => {
-                    window.location.href = `semestre-${semester}.html`;
+                    window.location.href = `./pages/semestre_${semester}/semestre-${semester}.html`;
                 }, 600);
                 return;
             }

@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // CLI commands sequence for changing interface
         const commands = [
-            { prompt: 'Switch(config-if)#', command: 'exit', delay: 400 },
-            { prompt: 'Switch(config)#', command: `interface GigabitEthernet0/${targetSemester}`, delay: 600 }
+            { prompt: 'Switch(config-if)#', command: 'exit', delay: 200 },
+            { prompt: 'Switch(config)#', command: `interface GigabitEthernet0/${targetSemester}`, delay: 300 }
         ];
         
         cliTransitionContent.innerHTML = '';
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // CLI command for exiting
         const commands = [
-            { prompt: 'Switch(config-if)#', command: 'end', delay: 400 }
+            { prompt: 'Switch(config-if)#', command: 'end', delay: 200 }
         ];
         
         cliTransitionContent.innerHTML = '';
