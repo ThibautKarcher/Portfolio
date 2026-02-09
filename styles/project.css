@@ -316,8 +316,6 @@
     border: 2px solid var(--border-color);
     border-radius: 12px;
     padding: 1.8rem;
-    position: sticky;
-    top: 100px;
 }
 
 .info-title {
