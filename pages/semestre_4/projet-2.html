@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stage BUT2 - Immersion Professionnelle</title>
+    <title>Stage BUT2 - Installation d'outils pour serveurs de calculs</title>
     <link rel="stylesheet" href="../../styles/main.css">
     <link rel="stylesheet" href="../../styles/semester.css">
     <link rel="stylesheet" href="../../styles/project.css">
@@ -46,17 +46,17 @@
                     </span>
                 </div>
 
-                <h1 class="project-main-title">Stage BUT2 : Immersion Professionnelle</h1>
+                <h1 class="project-main-title">Stage BUT2 : Installation d'outils pour serveurs de calculs</h1>
                 
                 <p class="project-subtitle">
-                    Stage de fin de deuxième année en entreprise pour mettre en pratique les compétences acquises en réseaux et cybersécurité dans un environnement professionnel réel.
+                    Stage d'un mois à l'IUT de Colmar au sein de l'équipe de recherche RT pour l'installation et la configuration d'un serveur de stockage Nextcloud destiné aux serveurs de calculs.
                 </p>
 
                 <div class="project-tags">
                     <span class="tag">Stage BUT2</span>
-                    <span class="tag">Professionnel</span>
-                    <span class="tag">Entreprise</span>
-                    <span class="tag">Réseaux</span>
+                    <span class="tag">Nextcloud</span>
+                    <span class="tag">Ubuntu Server</span>
+                    <span class="tag">Apache2</span>
                 </div>
             </div>
         </div>
@@ -72,181 +72,150 @@
                     <div class="content-block">
                         <h2 class="block-title">
                             <span class="icon">📋</span>
-                            Contexte du Stage
+                            Sujet du stage
                         </h2>
                         <div class="block-content">
                             <p>
-                                Le stage de deuxième année du BUT Réseaux & Télécommunications représente une étape clé dans la formation, 
-                                permettant de mettre en pratique les compétences techniques acquises durant les deux premières années d'études 
-                                dans un environnement professionnel réel.
+                                Lors de la 2ème année de BUT j'ai eu l'occasion de faire un stage obligatoire d'un mois 
+                                (normalement 2 mais à cause de difficultés lors de la recherche de stage j'ai dû écourter celui-ci).
                             </p>
                             <p>
-                                Cette immersion en entreprise offre l'opportunité de découvrir les métiers du secteur, de comprendre 
-                                l'organisation et les processus d'une structure professionnelle, et de contribuer concrètement à des projets 
-                                d'infrastructure réseau et de cybersécurité.
+                                J'ai donc fait mon stage à l'<strong>IUT de Colmar</strong> au sein de l'équipe de recherche RT. 
+                                Le but de mon stage était l'installation d'outils pour serveurs de calculs, notamment 
+                                l'installation d'un serveur de stockage avec le logiciel <strong>Nextcloud</strong> dans le but de 
+                                stocker les résultats du serveur de calculs ou autres données importantes.
                             </p>
                         </div>
                     </div>
 
-                    <!-- Objectifs -->
+                    <!-- Outils utilisés -->
                     <div class="content-block">
                         <h2 class="block-title">
+                            <span class="icon">🛠️</span>
+                            Outils utilisés
+                        </h2>
+                        <div class="block-content">
+                            <div class="tech-stack">
+                                <div class="tech-item-large">
+                                    <strong>OS :</strong> Ubuntu Server
+                                </div>
+                                <div class="tech-item-large">
+                                    <strong>Applicatif :</strong> Nextcloud
+                                </div>
+                                <div class="tech-item-large">
+                                    <strong>Base de données :</strong> MySQL
+                                </div>
+                                <div class="tech-item-large">
+                                    <strong>Serveur Web :</strong> Apache2
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Déroulé du stage -->
+                    <div class="content-block">
+                        <h2 class="block-title">
+                            <span class="icon">⚙️</span>
+                            Déroulé du stage
+                        </h2>
+                        <div class="block-content">
+                            <div class="stage-step">
+                                <h3>1. Recherche et choix de l'environnement</h3>
+                                <p>
+                                    Lors de ce stage, j'ai tout d'abord effectué un travail de recherche afin de déterminer le meilleur 
+                                    choix de configuration pour le serveur (choix de l'OS, format de disque à utiliser, etc...).
+                                </p>
+                                <p>
+                                    Dans notre cas, le choix d'<strong>Ubuntu Server</strong> a été fait car l'installation de Nextcloud 
+                                    est très simple à effectuer sur cet OS et car Ubuntu est fondé sur la base de Debian qui est une 
+                                    distribution que je connais assez bien. Il était donc plus simple et plus efficace de travailler 
+                                    sur cet OS dans mon cas.
+                                </p>
+                            </div>
+
+                            <div class="stage-step">
+                                <h3>2. Installation et Déploiement</h3>
+                                <p>
+                                    Il a ensuite fallu passer à l'installation de Nextcloud et ses dépendances. Nextcloud est un 
+                                    <strong>logiciel libre</strong> permettant l'auto-hébergement / stockage et le partage (pas utile 
+                                    dans notre cas) de fichiers via une interface web / application (pas utilisé dans notre cas non plus).
+                                </p>
+                            </div>
+
+                            <div class="stage-step">
+                                <h3>3. Configuration des services Web et BDD</h3>
+                                <p>
+                                    Nextcloud ayant une interface web intégrée, il a donc aussi fallu installer et configurer un service 
+                                    web (<strong>Apache2</strong>) afin de pouvoir accéder aux différentes pages fournies par Nextcloud. 
+                                    Il fallait aussi installer et créer une base de données pour gérer les utilisateurs notamment.
+                                </p>
+                            </div>
+
+                            <div class="stage-step">
+                                <h3>4. Administration avancée</h3>
+                                <p>
+                                    La configuration de Nextcloud peut se faire de plusieurs façons, soit via le fichier de config 
+                                    <code>config.php</code> ou alors via les commandes <strong>occ</strong> ("OwnCloudCommand").
+                                </p>
+                                <p>
+                                    J'ai aussi eu l'occasion de voir le fonctionnement ainsi que la mise en place de la 
+                                    <strong>gestion de quota</strong> sous Ubuntu afin d'éviter tout problème de saturation de stockage 
+                                    (par utilisateur ou total), ainsi que l'activation du <strong>Wake-on-LAN</strong> qui permet 
+                                    l'allumage à distance du serveur même éteint.
+                                </p>
+                            </div>
+
+                            <div class="stage-step">
+                                <h3>5. Documentation</h3>
+                                <p>
+                                    Pour finir j'ai réécrit une documentation d'installation afin de lister chaque commande tapée et de 
+                                    décrire l'installation dans les détails afin de pouvoir la refaire sans problème si besoin.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Apprentissages critiques -->
+                    <div class="content-block highlight-block">
+                        <h2 class="block-title">
                             <span class="icon">🎯</span>
-                            Objectifs du Stage
+                            Apprentissages critiques mobilisés
                         </h2>
                         <div class="block-content">
                             <ul class="styled-list">
                                 <li>
-                                    <strong>Mise en pratique des compétences techniques</strong>
-                                    <p>Application concrète des connaissances en administration réseau, configuration de matériel, et sécurisation des systèmes.</p>
+                                    <strong>AC23.02</strong> | Développer une application à partir d'un cahier des charges donné, 
+                                    pour le Web ou les périphériques mobiles
                                 </li>
                                 <li>
-                                    <strong>Découverte du monde professionnel</strong>
-                                    <p>Compréhension de l'organisation d'une équipe IT, des processus de travail et des méthodologies en entreprise.</p>
+                                    <strong>AC23.03</strong> | Utiliser un protocole réseau pour programmer une application client/serveur
                                 </li>
                                 <li>
-                                    <strong>Développement des compétences transversales</strong>
-                                    <p>Communication professionnelle, travail en équipe, gestion de projet et adaptation aux contraintes réelles.</p>
+                                    <strong>AC23.04</strong> | Installer, administrer un système de gestion de données
                                 </li>
                                 <li>
-                                    <strong>Contribution à des projets réels</strong>
-                                    <p>Participation active à des projets d'infrastructure, de maintenance ou de déploiement de solutions réseau.</p>
+                                    <strong>AC23.05</strong> | Accéder à un ensemble de données depuis une application et/ou un site web
                                 </li>
                             </ul>
                         </div>
                     </div>
 
-                    <!-- Missions types -->
-                    <div class="content-block">
-                        <h2 class="block-title">
-                            <span class="icon">⚙️</span>
-                            Missions Potentielles
-                        </h2>
-                        <div class="block-content">
-                            <div class="mission-grid">
-                                <div class="mission-card">
-                                    <h3>🔧 Administration Réseau</h3>
-                                    <ul>
-                                        <li>Configuration de commutateurs et routeurs</li>
-                                        <li>Gestion des VLANs et routage inter-VLAN</li>
-                                        <li>Supervision et monitoring réseau</li>
-                                        <li>Documentation technique</li>
-                                    </ul>
-                                </div>
-                                <div class="mission-card">
-                                    <h3>🔐 Cybersécurité</h3>
-                                    <ul>
-                                        <li>Configuration de pare-feu</li>
-                                        <li>Mise en place de VPN</li>
-                                        <li>Gestion des accès et authentification</li>
-                                        <li>Veille sécurité et mise à jour</li>
-                                    </ul>
-                                </div>
-                                <div class="mission-card">
-                                    <h3>💼 Support Utilisateur</h3>
-                                    <ul>
-                                        <li>Assistance technique niveau 1 et 2</li>
-                                        <li>Résolution d'incidents réseau</li>
-                                        <li>Installation et configuration de postes</li>
-                                        <li>Formation des utilisateurs</li>
-                                    </ul>
-                                </div>
-                                <div class="mission-card">
-                                    <h3>📊 Projet d'Infrastructure</h3>
-                                    <ul>
-                                        <li>Participation à des projets de migration</li>
-                                        <li>Déploiement de nouvelles solutions</li>
-                                        <li>Optimisation d'infrastructure existante</li>
-                                        <li>Rédaction de procédures</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Compétences -->
-                    <div class="content-block">
-                        <h2 class="block-title">
-                            <span class="icon">💡</span>
-                            Compétences Développées
-                        </h2>
-                        <div class="block-content">
-                            <div class="competence-section">
-                                <h3>Compétences Techniques</h3>
-                                <div class="tech-stack">
-                                    <span class="tech-item">Administration Réseau</span>
-                                    <span class="tech-item">Configuration Matériel</span>
-                                    <span class="tech-item">Sécurité Informatique</span>
-                                    <span class="tech-item">Supervision</span>
-                                    <span class="tech-item">Troubleshooting</span>
-                                    <span class="tech-item">Documentation</span>
-                                </div>
-                            </div>
-                            <div class="competence-section">
-                                <h3>Compétences Transversales</h3>
-                                <div class="tech-stack">
-                                    <span class="tech-item">Communication</span>
-                                    <span class="tech-item">Travail en Équipe</span>
-                                    <span class="tech-item">Autonomie</span>
-                                    <span class="tech-item">Rigueur</span>
-                                    <span class="tech-item">Adaptabilité</span>
-                                    <span class="tech-item">Gestion du Temps</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Livrables -->
-                    <div class="content-block">
-                        <h2 class="block-title">
-                            <span class="icon">📦</span>
-                            Livrables Attendus
-                        </h2>
-                        <div class="block-content">
-                            <div class="deliverables-grid">
-                                <div class="deliverable-item">
-                                    <div class="deliverable-icon">📄</div>
-                                    <h3>Rapport de Stage</h3>
-                                    <p>Document détaillant l'entreprise, les missions réalisées, les compétences mobilisées et le bilan de l'expérience.</p>
-                                </div>
-                                <div class="deliverable-item">
-                                    <div class="deliverable-icon">🎤</div>
-                                    <h3>Soutenance Orale</h3>
-                                    <p>Présentation devant un jury pour expliquer les missions, les difficultés rencontrées et les acquis professionnels.</p>
-                                </div>
-                                <div class="deliverable-item">
-                                    <div class="deliverable-icon">📋</div>
-                                    <h3>Fiche d'Évaluation</h3>
-                                    <p>Évaluation par le tuteur entreprise sur les compétences techniques et comportementales du stagiaire.</p>
-                                </div>
-                                <div class="deliverable-item">
-                                    <div class="deliverable-icon">📁</div>
-                                    <h3>Portfolio de Réalisations</h3>
-                                    <p>Documentation des projets et réalisations effectués durant le stage (si autorisé par l'entreprise).</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                     <!-- Bilan -->
-                    <div class="content-block highlight-block">
+                    <div class="content-block">
                         <h2 class="block-title">
                             <span class="icon">✨</span>
-                            Apports du Stage
+                            Bilan du stage
                         </h2>
                         <div class="block-content">
                             <p>
-                                Le stage de deuxième année constitue une expérience formatrice essentielle dans le parcours BUT R&T. 
-                                Il permet de confronter les compétences théoriques et pratiques acquises en formation aux exigences 
-                                du monde professionnel.
+                                Ce stage m'a permis de mettre en pratique mes compétences en administration système Linux et en 
+                                déploiement d'applications web. J'ai pu approfondir mes connaissances en gestion de serveurs, 
+                                bases de données et services web.
                             </p>
                             <p>
-                                Cette immersion offre une vision concrète des métiers de l'informatique réseau et de la cybersécurité, 
-                                aide à affiner son projet professionnel, et constitue un premier pas vers l'insertion dans le monde du travail.
-                            </p>
-                            <p>
-                                Les relations professionnelles établies durant ce stage peuvent également ouvrir des opportunités pour 
-                                l'alternance en troisième année ou pour un premier emploi après l'obtention du diplôme.
+                                L'expérience au sein de l'équipe de recherche RT de l'IUT m'a également permis de découvrir 
+                                le fonctionnement d'une infrastructure de calcul scientifique et les enjeux liés au stockage 
+                                de données volumineuses.
                             </p>
                         </div>
                     </div>
@@ -264,15 +233,15 @@
                             </div>
                             <div class="info-item">
                                 <span class="info-label">Durée</span>
-                                <span class="info-value">10 semaines minimum</span>
+                                <span class="info-value">1 mois</span>
                             </div>
                             <div class="info-item">
-                                <span class="info-label">Période</span>
-                                <span class="info-value">Avril - Juin</span>
+                                <span class="info-label">Lieu</span>
+                                <span class="info-value">IUT de Colmar</span>
                             </div>
                             <div class="info-item">
-                                <span class="info-label">Évaluation</span>
-                                <span class="info-value">Rapport + Soutenance</span>
+                                <span class="info-label">Équipe</span>
+                                <span class="info-value">Recherche RT</span>
                             </div>
                         </div>
                     </div>
@@ -293,44 +262,40 @@
                                 <span class="badge-number">3</span>
                                 <span class="badge-text">Programmer</span>
                             </a>
-                            <a href="../../pages/competences/competence-5.html" class="competence-badge cyber">
-                                <span class="badge-number">5</span>
-                                <span class="badge-text">Cybersécurité</span>
-                            </a>
                         </div>
                     </div>
 
                     <!-- Technologies -->
                     <div class="info-card">
-                        <h3 class="info-title">Technologies Potentielles</h3>
+                        <h3 class="info-title">Stack Technique</h3>
                         <div class="tech-stack-sidebar">
-                            <span class="tech-badge">Cisco IOS</span>
+                            <span class="tech-badge">Ubuntu Server</span>
+                            <span class="tech-badge">Nextcloud</span>
+                            <span class="tech-badge">Apache2</span>
+                            <span class="tech-badge">MySQL</span>
+                            <span class="tech-badge">PHP</span>
                             <span class="tech-badge">Linux</span>
-                            <span class="tech-badge">Windows Server</span>
-                            <span class="tech-badge">VMware</span>
-                            <span class="tech-badge">Wireshark</span>
-                            <span class="tech-badge">SNMP</span>
-                            <span class="tech-badge">VPN</span>
-                            <span class="tech-badge">Firewall</span>
+                            <span class="tech-badge">Wake-on-LAN</span>
+                            <span class="tech-badge">Quota Management</span>
                         </div>
                     </div>
 
-                    <!-- Resources -->
+                    <!-- Livrables -->
                     <div class="info-card">
-                        <h3 class="info-title">Ressources</h3>
+                        <h3 class="info-title">Livrables</h3>
                         <div class="resources-list">
-                            <a href="#" class="resource-link">
+                            <div class="resource-link">
                                 <span class="resource-icon">📄</span>
-                                <span>Convention de stage</span>
-                            </a>
-                            <a href="#" class="resource-link">
-                                <span class="resource-icon">📝</span>
-                                <span>Modèle rapport</span>
-                            </a>
-                            <a href="#" class="resource-link">
+                                <span>Documentation d'installation</span>
+                            </div>
+                            <div class="resource-link">
                                 <span class="resource-icon">📊</span>
-                                <span>Grille d'évaluation</span>
-                            </a>
+                                <span>Rapport de stage</span>
+                            </div>
+                            <div class="resource-link">
+                                <span class="resource-icon">🔧</span>
+                                <span>Scripts de configuration</span>
+                            </div>
                         </div>
                     </div>
                 </aside>
@@ -354,11 +319,11 @@
                 <div class="footer-section contact-info">
                     <div class="contact-item">
                         <span class="icon">📧</span>
-                        <a href="mailto:contact@example.com">contact@example.com</a>
+                        <a href="mailto:thibaut.karcher@uha.fr">thibaut.karcher@uha.fr</a>
                     </div>
                     <div class="contact-item">
                         <span class="icon">📱</span>
-                        <span>+33 6 XX XX XX XX</span>
+                        <span>+33 6 08 36 93 45</span>
                     </div>
                 </div>
 
