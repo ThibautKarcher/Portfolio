@@ -73,6 +73,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Architecture Microservices",
                 "Projet de fin d'études"
             ]
+        },
+        competences: {
+            vlan: "trunk",
+            title: "Port Trunk : Compétences de la Formation",
+            skills: ["Administration réseaux", "Connexion entreprises/usagers", "Création outils R&T", "Sécurisation SI"],
+            projects: [
+                "3 Compétences communes du tronc R&T",
+                "2 Compétences du parcours Cybersécurité",
+                "Apprentissages critiques détaillés",
+                "Découvrir toutes les compétences →"
+            ]
         }
     };
     
@@ -172,10 +183,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Add event listeners to ports
     ports.forEach(port => {
-        const semester = parseInt(port.dataset.semester);
+        const semester = port.dataset.semester;
         const isDisabled = port.classList.contains('disabled');
         
-        // Only enable hover and click for active semesters (1-5)
+        // Only enable hover and click for active ports
         if (!isDisabled) {
             port.addEventListener('mouseenter', () => {
                 showCLI(semester);
@@ -192,7 +203,61 @@ document.addEventListener('DOMContentLoaded', () => {
             
             port.addEventListener('click', () => {
                 const portNumber = port.querySelector('.port-number').textContent.replace('Gi0/', '');
-                startCLITransition(semester, portNumber);
+                
+                // Special handling for competences trunk port
+                if (semester === 'competences') {
+                    cliTransition.classList.add('active');
+                    
+                    const commands = [
+                        { prompt: 'Switch>', command: 'enable', delay: 130 },
+                        { prompt: 'Switch#', command: 'show interface trunk', delay: 165 },
+                        { prompt: 'Switch#', command: 'show competences-list', delay: 130 }
+                    ];
+                    
+                    cliTransitionContent.innerHTML = '';
+                    
+                    function typeCommand(index) {
+                        if (index >= commands.length) {
+                            setTimeout(() => {
+                                window.location.href = './competences.html';
+                            }, 400);
+                            return;
+                        }
+                        
+                        const cmd = commands[index];
+                        const line = document.createElement('div');
+                        line.className = 'cli-line';
+                        
+                        const commandText = cmd.command || '';
+                        const promptSpan = document.createElement('span');
+                        promptSpan.className = 'cli-prompt';
+                        promptSpan.textContent = cmd.prompt + ' ';
+                        line.appendChild(promptSpan);
+                        
+                        const commandSpan = document.createElement('span');
+                        commandSpan.className = 'cli-command';
+                        line.appendChild(commandSpan);
+                        
+                        cliTransitionContent.appendChild(line);
+                        cliTransitionContent.scrollTop = cliTransitionContent.scrollHeight;
+                        
+                        let charIndex = 0;
+                        const typeInterval = setInterval(() => {
+                            if (charIndex < commandText.length) {
+                                commandSpan.textContent = commandText.substring(0, charIndex + 1);
+                                charIndex++;
+                            } else {
+                                clearInterval(typeInterval);
+                                setTimeout(() => typeCommand(index + 1), cmd.delay);
+                            }
+                        }, 33);
+                    }
+                    
+                    setTimeout(() => typeCommand(0), 200);
+                } else {
+                    // Normal semester navigation
+                    startCLITransition(parseInt(semester), portNumber);
+                }
             });
         }
     });

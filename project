@@ -1,0 +1,63 @@
+Projet : Instravel - Application de carnet de voyage
+Auteur : Thibaut Karcher Collection : Portfolio
+
+📝 Introduction
+"Instravel" est une application web complète de gestion de carnets de voyage. Le projet visait à développer une plateforme sociale permettant aux utilisateurs de documenter leurs périples, de partager leurs expériences à travers des étapes détaillées et des photos, et d'interagir avec une communauté de voyageurs.
+
+🛠️ Outils et Environnement
+Langage & Backend : Python (Environnement géré via Anaconda).
+
+Base de données : Déploiement conteneurisé avec Docker et Docker Compose.
+
+Gestion d'environnement : Fichiers de configuration Conda (environment.yml).
+
+🔍 Sujet
+L'objectif était de concevoir une application fonctionnelle intégrant des mécanismes d'authentification sécurisés, une gestion de base de données relationnelle pour stocker les utilisateurs et leurs voyages, ainsi qu'une interface utilisateur intuitive pour la navigation et l'interaction sociale (système d'abonnements, commentaires, profils privés/publics).
+
+⚙️ Déroulé et Fonctionnalités du projet
+1. Mise en place de l'architecture technique 
+
+Le développement a débuté par l'installation de l'environnement de développement. Nous avons utilisé Docker pour initialiser la base de données à partir d'un dump SQL et Conda pour gérer les dépendances Python, assurant ainsi la portabilité du projet sur Linux, Windows et MacOS.
+
+2. Gestion des utilisateurs et Sécurité 
+
+Nous avons implémenté un système complet d'authentification :
+
+Inscription/Connexion : Formulaires sécurisés pour la création de compte.
+
+Récupération de compte : Système de "Mot de passe oublié" avec envoi automatique d'un code de vérification à 6 chiffres par email.
+
+Profils : Gestion des informations personnelles (photo, biographie, nationalité) et paramètres de confidentialité (profil privé nécessitant une approbation pour être suivi).
+
+3. Cœur de l'application : Les Voyages 
+
+La fonctionnalité principale permet aux utilisateurs de créer des "Voyages", auxquels ils ajoutent ensuite des "Étapes". Chaque étape est enrichie de :
+
+Nom et description.
+
+Dates, hashtags et galerie de photos. Cette structure permet une documentation chronologique et détaillée des aventures.
+
+4. Aspect Social et Communautaire 
+
+L'application intègre des fonctionnalités de réseau social :
+
+Flux d'actualité : Page d'accueil affichant les voyages publics.
+
+Interactions : Système de commentaires sur les étapes et barre de recherche pour trouver des voyages ou des utilisateurs.
+
+Abonnements : Possibilité de suivre d'autres utilisateurs pour voir leurs contenus dans un fil dédié.
+
+💻 Compétences techniques mises en œuvre
+Virtualisation : Utilisation de Docker pour la gestion de services tiers (Base de données).
+
+Développement Fullstack : Création d'une application Python interconnectant un backend logique et une interface utilisateur.
+
+Sécurité Applicative : Gestion des sessions utilisateurs et protection des données (profils privés).
+
+📁 Documents et traces
+Code source : (Lien vers le dépôt GitHub si disponible)
+
+
+Documentation : README.md (Guide d'installation et d'utilisation) 
+
+Note obtenue : (À compléter)
