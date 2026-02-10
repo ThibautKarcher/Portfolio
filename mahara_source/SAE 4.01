@@ -1,0 +1,51 @@
+📝 Introduction
+L'objectif principal de cette SAE est de créer un réseau d'entreprise sécurisé. Le projet impose la mise en place d'une infrastructure complète incluant un pare-feu, un annuaire LDAP pour l'authentification, un service de partage de fichiers NFS, ainsi qu'un service de messagerie et un accès VPN pour les postes nomades. Une attention particulière est portée à la création d'une infrastructure de gestion de clés (IGC) pour sécuriser les protocoles par TLS et authentifier les accès distants.
+
+🛠️ Outils et technologies utilisés
+
+Virtualisation : Lab Virtualbox utilisant des machines virtuelles Linux Debian.
+
+
+Services de base : BIND9 pour le DNS.
+
+
+Sécurité et VPN : OpenVPN et Infrastructure de Gestion de Clés (IGC).
+
+
+Authentification : Annuaire LDAP / LDAPs (TLS).
+
+
+Messagerie : Postfix (SMTP) et Dovecot (IMAP/POP).
+
+
+Web et Proxy : Apache2 ou Nginx, Loadbalancing et proxy authentifiant (Squid).
+
+🔍 Sujet
+Le projet consiste à concevoir et administrer une infrastructure réseau robuste. Le schéma de principe s'articule autour d'un pare-feu (FW) assurant l'interface entre le WAN et le réseau interne. Ce réseau héberge l'ensemble des services critiques : DNS, LDAP, NFS, messagerie (Postfix/Dovecot), ainsi qu'un service Web en haute-disponibilité et un serveur OpenVPN pour la mobilité.
+
+⚙️ Déroulé et organisation du projet
+Le projet est réalisé en groupe de 3 étudiants, avec une liberté de choix technique pour répondre aux exigences du cahier des charges.
+
+1. Planification et mise en place du Lab
+La première étape consiste à définir un plan d'adressage IP rigoureux et à préparer l'environnement virtuel sous Virtualbox.
+
+2. Configuration des services d'infrastructure
+Cette phase inclut la mise en place du pare-feu et du serveur DNS. Parallèlement, l'Infrastructure de Gestion de Clés (IGC) est déployée pour générer les certificats racine, serveur et client indispensables à la sécurisation des échanges.
+
+3. Gestion de l'authentification et du partage de fichiers
+Il s'agit ensuite d'initialiser l'annuaire LDAP et de configurer l'authentification centralisée pour le serveur Debian et le service de partage de fichiers NFS.
+
+4. Déploiement de la messagerie et du VPN
+Configuration sécurisée des serveurs Postfix (SMTP) et Dovecot (IMAP) utilisant l'annuaire LDAP. En complément, le serveur OpenVPN est configuré pour permettre l'accès sécurisé aux postes nomades, avec une gestion précise du filtrage et du routage.
+
+5. Services Web et Haute-Disponibilité
+La dernière étape logicielle concerne l'installation d'un service Web sécurisé en HTTPS, l'implémentation de la haute-disponibilité par loadbalancing et la mise en place d'un proxy authentifiant.
+
+📁 Documents et traces
+
+Démonstration : Réalisation d'une démo en vidéo du système fonctionnel.
+
+
+Soutenance : Présentation technique de 20 minutes incluant l'argumentation des choix, la présentation des schémas détaillés et une évaluation des risques.
+
+Note obtenue : (À compléter)

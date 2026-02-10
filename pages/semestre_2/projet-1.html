@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAE 2.03 - Mettre en place une solution informatique pour l'entreprise</title>
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/semester.css">
+    <link rel="stylesheet" href="../../styles/project.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../../index.html" style="text-decoration: none;">
+                    <span class="terminal-prompt">root@portfolio:~#</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="semestre-2.html">← Retour Semestre 2</a></li>
+                <li><a href="../../index.html">Switch</a></li>
+                <li><a href="../../index.html#footer">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Project Header -->
+    <section class="project-header-section">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../../index.html">Switch</a>
+                <span class="separator">/</span>
+                <a href="semestre-2.html">VLAN 20</a>
+                <span class="separator">/</span>
+                <span class="current">Projet 1</span>
+            </div>
+
+            <div class="project-header-content">
+                <div class="project-meta">
+                    <span class="project-number">Node 01</span>
+                    <span class="project-status-badge">
+                        <span class="status-dot"></span>
+                        Active
+                    </span>
+                </div>
+
+                <h1 class="project-main-title">SAE 2.03 : Mettre en place une solution informatique pour l'entreprise</h1>
+                
+                <p class="project-subtitle">
+                    Création et déploiement d'un site web dynamique avec Django pour la gestion d'un système de notes. Configuration complète d'un serveur web et d'une base de données.
+                </p>
+
+                <div class="project-tags">
+                    <span class="tag">Django</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Base de données</span>
+                    <span class="tag">CRUD</span>
+                    <span class="tag">Serveur Web</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="project-content-section">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Main Content -->
+                <div class="main-content">
+                    <!-- Introduction -->
+                    <div class="content-block">
+                        <h2 class="content-title">
+                            <span class="icon">📝</span>
+                            Introduction
+                        </h2>
+                        <div class="content-body">
+                            <p>
+                                Le but de cette SAE était d'utiliser les différents outils vus en cours afin de créer et déployer, par groupe de 3, un site web dynamique sur un serveur web permettant l'ajout, la consultation, l'affichage et la modification ou suppression de différentes données stockées dans une base de données que nous avons configurée.
+                            </p>
+                            <p>
+                                Au cours de cette SAE, nous avons été amenés à découvrir plusieurs solutions, outils et logiciels de déploiement d'application et de base de données afin de pouvoir établir le meilleur choix final et améliorer nos compétences de travail en groupe à l'aide d'outils collaboratifs.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Apprentissages critiques -->
+                    <div class="content-block">
+                        <h2 class="content-title">
+                            <span class="icon">🎯</span>
+                            Apprentissages critiques concernés
+                        </h2>
+                        <div class="content-body">
+                            <ul class="objectives-list">
+                                <li><strong>AC0311</strong> : Utiliser un système informatique et ses outils</li>
+                                <li><strong>AC0312</strong> : Lire, exécuter, corriger et modifier un programme</li>
+                                <li><strong>AC0313</strong> : Traduire un algorithme dans un langage de programmation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Sujet d'étude -->
+                    <div class="content-block">
+                        <h2 class="content-title">
+                            <span class="icon">🔍</span>
+                            Sujet : Gestionnaire de notes
+                        </h2>
+                        <div class="content-body">
+                            <p>
+                                Dans le cas de notre groupe, le sujet du projet portait sur la création d'un <strong>gestionnaire de notes</strong> permettant l'ajout, l'affichage, la modification et la suppression de différentes données définies :
+                            </p>
+                            <ul class="objectives-list">
+                                <li>Les enseignants</li>
+                                <li>Les étudiants</li>
+                                <li>Les ressources</li>
+                                <li>Les unités d'enseignement</li>
+                                <li>Les examens</li>
+                                <li>Les notes</li>
+                            </ul>
+                            <p>
+                                Nous avons donc dû mettre en place pour chacune de ces données un formulaire de création ainsi qu'un affichage de la liste de chacune de ces données qui permet ensuite leur modification et suppression si nécessaire.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Déroulé et organisation -->
+                    <div class="content-block">
+                        <h2 class="content-title">
+                            <span class="icon">⚙️</span>
+                            Déroulé et organisation du projet
+                        </h2>
+                        <div class="content-body">
+                            <h3>1. Fondations de l'application Django</h3>
+                            <p>
+                                Tout d'abord, nous avons créé les fondations et bases de notre application avec le framework Django. Nous avons donc créé les différents CRUD (leurs modèles, vues, URL's, etc...), le squelette HTML du site, la page d'accueil (index) du site, ainsi que les différentes pages des formulaires et d'affichage des données.
+                            </p>
+
+                            <h3>2. Répartition des rôles dans le groupe</h3>
+                            <p>
+                                Nous avons ensuite séparé le groupe en plusieurs rôles selon les compétences et préférences de chacun :
+                            </p>
+                            <ul class="objectives-list">
+                                <li><strong>Membre 1</strong> : Fonctionnalités supplémentaires du site (relations entre CRUD, possibilité d'ajout des données via le dépôt d'un fichier qui reconnait et implémente les différentes informations correspondantes directement sans ajout manuel, création d'un relevé de note)</li>
+                                <li><strong>Membre 2 et 3</strong> : Déploiement de l'application sur un serveur web et configuration de la base de données</li>
+                            </ul>
+
+                            <h3>3. Configuration et déploiement</h3>
+                            <p>
+                                La phase finale consistait à configurer le serveur web et la base de données, puis à déployer l'application dans un environnement de production. Cette étape a nécessité la mise en place de différentes solutions testées au préalable pour garantir le meilleur choix technique.
+                            </p>
+
+                            <h3>4. Travail collaboratif</h3>
+                            <p>
+                                Tout au long du projet, nous avons utilisé des outils collaboratifs pour coordonner notre travail, versionner notre code et documenter nos procédures. Cette méthodologie nous a permis de travailler efficacement en équipe tout en maintenant la qualité du code.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Ressources académiques -->
+                    <div class="content-block">
+                        <h2 class="content-title">
+                            <span class="icon">📚</span>
+                            Ressources académiques associées
+                        </h2>
+                        <div class="content-body">
+                            <ul class="results-list">
+                                <li><strong>R2.07</strong> | Fondamentaux de la programmation</li>
+                                <li><strong>R2.08</strong> | Base des systèmes d'exploitation</li>
+                                <li><strong>R2.09</strong> | Introduction aux technologies web</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Résultats et apprentissages -->
+                    <div class="content-block">
+                        <h2 class="content-title">
+                            <span class="icon">✨</span>
+                            Résultats et apprentissages
+                        </h2>
+                        <div class="content-body">
+                            <p>
+                                Cette SAE nous a permis de réviser l'ensemble des aspects vus dans chaque ressource et de les regrouper en un seul projet. Nous avons découvert différentes façons de déployer un site web dynamique sur un serveur web avec une base de données externe que nous avons configurée depuis le début.
+                            </p>
+                            <div class="skills-acquired">
+                                <div class="skill-item">
+                                    <strong>Compétences techniques acquises</strong>
+                                    <p>Maîtrise du framework Django, création de CRUD complets, gestion de base de données, déploiement sur serveur web</p>
+                                </div>
+                                <div class="skill-item">
+                                    <strong>Compétences organisationnelles</strong>
+                                    <p>Mise en place d'un plan de travail en groupe avec répartition des tâches entre les différents membres</p>
+                                </div>
+                                <div class="skill-item">
+                                    <strong>Outils collaboratifs</strong>
+                                    <p>Utilisation d'outils de versionnage et de gestion de projet pour travailler efficacement en équipe</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Documents et traces -->
+                    <div class="content-block">
+                        <h2 class="content-title">
+                            <span class="icon">📁</span>
+                            Documents et traces
+                        </h2>
+                        <div class="content-body">
+                            <div class="skills-acquired">
+                                <div class="skill-item">
+                                    <strong>Code source</strong>
+                                    <p>Code du site, diagrammes de conception et architecture du projet</p>
+                                </div>
+                                <div class="skill-item">
+                                    <strong>Documentation</strong>
+                                    <p>Procédure de création et de déploiement complète</p>
+                                </div>
+                                <div class="skill-item">
+                                    <strong>Aperçu du site</strong>
+                                    <p>Captures d'écran de l'interface utilisateur et des fonctionnalités</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <!-- Project Info Card -->
+                    <div class="info-card">
+                        <h3 class="info-title">Informations Projet</h3>
+                        <div class="info-content">
+                            <div class="info-item">
+                                <span class="info-label">Code</span>
+                                <span class="info-value">SAE 2.03</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Semestre</span>
+                                <span class="info-value">2</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Type</span>
+                                <span class="info-value">Projet en groupe de 3</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Status</span>
+                                <span class="info-value status-success">Complété</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technologies utilisées -->
+                    <div class="info-card">
+                        <h3 class="info-title">Technologies utilisées</h3>
+                        <div class="tech-stack">
+                            <div class="tech-item">
+                                <span class="tech-icon">🐍</span>
+                                <div>
+                                    <strong>Django</strong>
+                                    <p>Framework Python pour le web</p>
+                                </div>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-icon">💾</span>
+                                <div>
+                                    <strong>Base de données</strong>
+                                    <p>Configuration et gestion de données</p>
+                                </div>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-icon">🖥️</span>
+                                <div>
+                                    <strong>PyCharm</strong>
+                                    <p>IDE pour le développement</p>
+                                </div>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-icon">🌐</span>
+                                <div>
+                                    <strong>Serveur Web</strong>
+                                    <p>Déploiement et hébergement</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Links -->
+                    <div class="info-card">
+                        <h3 class="info-title">Livrables du projet</h3>
+                        <div class="resource-links">
+                            <a href="../../mahara_source/SAE 2.03 _ Mettre en place une solution informatique pour l'entreprise - UHA Mahara.pdf" class="resource-link" target="_blank">
+                                <span class="icon">📄</span>
+                                Portfolio Mahara
+                            </a>
+                            <a href="#" class="resource-link">
+                                <span class="icon">💻</span>
+                                Code source
+                            </a>
+                            <a href="#" class="resource-link">
+                                <span class="icon">📊</span>
+                                Diagramme de conception
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Navigation -->
+                    <div class="info-card">
+                        <h3 class="info-title">Navigation</h3>
+                        <div class="project-navigation">
+                            <a href="semestre-2.html" class="nav-btn">
+                                ← Tous les projets
+                            </a>
+                            <a href="projet-2.html" class="nav-btn">
+                                Projet suivant →
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Navigation</h3>
+                    <div class="footer-links">
+                        <a href="semestre-2.html">← Retour Semestre 2</a>
+                        <a href="../../index.html">Switch Principal</a>
+                    </div>
+                </div>
+
+                <div class="footer-section contact-info">
+                    <div class="contact-item">
+                        <span class="icon">📧</span>
+                        <a href="mailto:thibaut.karcher@uha.fr">thibaut.karcher@uha.fr</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">📱</span>
+                        <span>+33 6 08 36 93 45</span>
+                    </div>
+                </div>
+
+                <div class="footer-section social-links">
+                    <a href="https://github.com/ThibautKarcher" target="_blank" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/thibaut-karcher/" target="_blank" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Portfolio Network-Centric | Semestre 2 - Node 01</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
