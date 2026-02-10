@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
             skills: ["Infrastructure réseau", "LDAP", "VPN", "PKI/IGC", "Haute disponibilité"],
             projects: [
                 "SAE 4.01 - Réseau d'entreprise sécurisé",
-                "Stage BUT2 - Immersion professionnelle",
+                "Stage BUT2 - Installation Nextcloud IUT Colmar",
                 "Configuration réseau avancée",
                 "Administration système et sécurité"
             ]
