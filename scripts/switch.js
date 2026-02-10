@@ -11,67 +11,57 @@ document.addEventListener('DOMContentLoaded', () => {
     const semesterData = {
         1: {
             vlan: 10,
-            title: "Semestre 1 : Fondamentaux des Réseaux",
-            skills: ["Administration Linux", "Bases TCP/IP", "Python Scripting", "Cisco IOS"],
+            title: "Semestre 1 : Découverte des Réseaux et Télécommunications",
+            skills: ["Hygiène informatique", "Configuration réseau", "Déploiement Wi-Fi", "Développement web", "Sécurité réseau"],
             projects: [
-                "Configuration d'un serveur DHCP",
-                "Automatisation avec Python",
-                "Mise en place d'un réseau LAN",
-                "Documentation réseau",
-                "Monitoring avec Nagios",
-                "Scripts Bash avancés"
+                "SAE 1.01 - Hygiène informatique",
+                "SAE 1.02 - Réseau entreprise",
+                "SAE 1.03 - Déploiement Wi-Fi",
+                "SAE 1.04 - Site web",
+                "SAE 1.05 - Attaques réseau"
             ]
         },
         2: {
             vlan: 20,
-            title: "Semestre 2 : Routage & Commutation",
-            skills: ["VLAN Configuration", "Routage Statique/Dynamique", "Spanning Tree", "EtherChannel"],
+            title: "Semestre 2 : Approfondissement Réseaux & Communication",
+            skills: ["Transmissions numériques", "Django Framework", "ToIP", "Protocoles de communication"],
             projects: [
-                "Infrastructure multi-VLAN",
-                "Routage inter-VLAN",
-                "Configuration STP",
-                "Mise en place HSRP",
-                "Agrégation de liens",
-                "QoS sur switches"
+                "SAE 2.02 - Systèmes de transmissions",
+                "SAE 2.03 - Application web Django",
+                "SAE 2.04 - ToIP (Téléphonie sur IP)"
             ]
         },
         3: {
             vlan: 30,
-            title: "Semestre 3 : Sécurité & Services",
-            skills: ["Firewall Configuration", "VPN", "Services Web", "Sécurité réseau"],
+            title: "Semestre 3 : Infrastructure & Cybersécurité",
+            skills: ["Infrastructure IoT", "Architecture Client/Serveur", "Routage FAI", "Penetration Testing"],
             projects: [
-                "Déploiement pfSense",
-                "Configuration VPN site-to-site",
-                "Serveur Web Apache/Nginx",
-                "Certificats SSL/TLS",
-                "IDS/IPS avec Snort",
-                "Hardening Linux"
+                "SAE 3.01 - Infrastructure IoT",
+                "SAE 3.02 - Application Client/Serveur",
+                "SAE 3.03 - FAI et routage avancé",
+                "SAE 3.04 - Pentesting (Cyber)"
             ]
         },
         4: {
             vlan: 40,
-            title: "Semestre 4 : Systèmes & Virtualisation",
-            skills: ["Virtualisation", "Docker", "Kubernetes", "Active Directory"],
+            title: "Semestre 4 : Infrastructure et Sécurité Avancée",
+            skills: ["Infrastructure réseau", "LDAP", "VPN", "PKI/IGC", "Haute disponibilité"],
             projects: [
-                "Infrastructure VMware",
-                "Conteneurisation avec Docker",
-                "Orchestration K8s",
-                "Domaine Active Directory",
-                "Automatisation Ansible",
-                "CI/CD Pipeline"
+                "SAE 4.01 - Réseau d'entreprise sécurisé",
+                "Stage BUT2 - Immersion professionnelle",
+                "Configuration réseau avancée",
+                "Administration système et sécurité"
             ]
         },
         5: {
             vlan: 50,
-            title: "Semestre 5 : Cloud & DevOps",
-            skills: ["AWS/Azure", "Infrastructure as Code", "Monitoring", "High Availability"],
+            title: "Semestre 5 : Projets Avancés & Spécialisation",
+            skills: ["IoT & LoRaWan", "Développement fullstack", "Conteneurisation Docker", "Architecture applicative"],
             projects: [
-                "Déploiement AWS EC2/S3",
-                "Terraform Infrastructure",
-                "Monitoring Prometheus/Grafana",
-                "Load Balancing",
-                "Architecture Microservices",
-                "Projet de fin d'études"
+                "SAE 5.01 - Système de tracking IoT LoRaWan",
+                "SAE 5.02 - Application web Instravel",
+                "Gestion de projet en équipe",
+                "Technologies émergentes"
             ]
         },
         competences: {
@@ -219,7 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     function typeCommand(index) {
                         if (index >= commands.length) {
                             setTimeout(() => {
-                                window.location.href = './competences.html';
+                                window.location.href = './pages/competences/competences.html';
                             }, 400);
                             return;
                         }

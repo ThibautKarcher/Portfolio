@@ -1,0 +1,45 @@
+Stage de 2ème année : Installation d'outils pour serveurs de calculs
+Auteur : Thibaut Karcher Lieu : IUT de Colmar (Équipe de recherche RT) Collection : Portfolio
+
+📝 Sujet du stage
+Lors de la 2ème année de BUT j'ai eu l'occasion de faire un stage obligatoire d'un mois (normalement 2 mais à cause de difficultés lors de la recherche de stage j'ai dû écourter celui-ci).
+
+J'ai donc fait mon stage à l'IUT de Colmar au sein de l'équipe de recherche RT. Le but de mon stage était l'installation d'outils pour serveurs de calculs, notamment l'installation d'un serveur de stockage avec le logiciel Nextcloud dans le but de stocker les résultats du serveur de calculs ou autres données importantes.
+
+🛠️ Outils utilisés
+OS : Ubuntu server
+
+Applicatif : Nextcloud
+
+Base de données : MySQL
+
+Serveur Web : Apache2
+
+🎯 Apprentissages critiques
+AC23.02 | Développer une application à partir d’un cahier des charges donné, pour le Web ou les périphériques mobiles
+
+AC23.03 | Utiliser un protocole réseau pour programmer une application client/serveur
+
+AC23.04 | Installer, administrer un système de gestion de données
+
+AC23.05 | Accéder à un ensemble de données depuis une application et/ou un site web
+
+⚙️ Déroulé du stage
+1. Recherche et choix de l'environnement
+Lors de ce stage, j'ai tout d'abord effectuer un travail de recherche afin de déterminer le meilleur choix de configuration pour le serveur ( choix de l'OS, format de disque à utiliser, etc...), dans notre cas, le choix d'Ubuntu serveur à été fait car l'installation de Nextcloud est très simple à effectuer sur cet OS et car Ubuntu est fondé sur la base de Debian qui est une distribution que je connais assez bien, il était donc plus simple et plus efficace de travailler sur cette OS dans mon cas.
+
+2. Installation et Déploiement
+Il a ensuite fallu passer à l'installation de Nextcloud et ses dépendances. Nextcloud est un logiciel libre permettant l'auto-hébergement / stockage et le partage (pas utile dans notre cas) de fichier via une interface web / application (pas utilisé dans notre cas non plus).
+
+Note : Exemple du rendu du site (ici onglet "fichier" du site)
+
+3. Configuration des services Web et BDD
+Nextloud ayant une interface web intégré, il a donc aussi fallu installer et configurer un service web (Apache2) afin de pouvoir accéder au différentes pages fournies par Nextcloud. Il fallait aussi installer et créer une base de donnée pour gérer les utilisateurs notamment.
+
+4. Administration avancée
+La configuration de Nextcloud peut se faire de plusieurs façon, soit via le fichier de config "config.php" ou alors via les commandes occ ("OwnCloudCommmand").
+
+J'ai aussi eu l'occasion de voir le fonctionnement ainsi que la mise en place de la gestion de quota sous Ubuntu afin d'éviter tout problème de saturation de stockage ( par utilisateur ou total), ainsi que l'activation du Wakeup-on-lan qui permet l'allumage à distance du serveur même éteint.
+
+5. Documentation
+Pour finir j'ai réécrit une doc d'installation afin de lister chaque commande tapée et de décrire l'installation dans les détails afin de pouvoir la refaire sans problème si besoin

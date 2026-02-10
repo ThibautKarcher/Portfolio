@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compétence 5 - Surveiller un système d'information sécurisé</title>
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/semester.css">
+    <link rel="stylesheet" href="../../styles/project.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --accent-cyber: #ef4444;
+            --accent-cyber-light: #f87171;
+            --accent-cyber-dark: #dc2626;
+        }
+
+        .ce-section, .ac-section {
+            margin-bottom: 30px;
+        }
+
+        .ce-card, .ac-card {
+            background: rgba(30, 41, 59, 0.6);
+            border: 1px solid rgba(100, 116, 139, 0.3);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .ce-card:hover, .ac-card:hover {
+            border-color: rgba(239, 68, 68, 0.5);
+            box-shadow: 0 4px 15px rgba(239, 68, 68, 0.1);
+        }
+
+        .ce-title, .ac-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--accent-cyber);
+            margin-bottom: 10px;
+        }
+
+        .ce-description, .ac-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .proof {
+            background: rgba(239, 68, 68, 0.1);
+            border-left: 3px solid var(--accent-cyber);
+            padding: 12px 15px;
+            margin-top: 10px;
+            border-radius: 4px;
+        }
+
+        .proof-label {
+            font-weight: 600;
+            color: var(--accent-cyber);
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+
+        .proof-text {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .niveau-section {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid rgba(100, 116, 139, 0.3);
+        }
+
+        .niveau-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            background: linear-gradient(135deg, var(--accent-cyber), var(--accent-cyber-dark));
+            color: white;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .project-status-badge {
+            background: linear-gradient(135deg, var(--accent-cyber), var(--accent-cyber-dark));
+            color: #000000 !important;
+            border-color: #dc2626;
+        }
+
+        .status-dot {
+            background-color: #000000;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .sidebar-title .icon {
+            color: var(--accent-cyber);
+        }
+
+        .related-list a:hover {
+            color: var(--accent-cyber);
+        }
+
+        .tag {
+            background: rgba(239, 68, 68, 0.2);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../../index.html" style="text-decoration: none;">
+                    <span class="terminal-prompt">root@portfolio:~#</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="competences.html">← Retour Compétences</a></li>
+                <li><a href="../../index.html">Switch</a></li>
+                <li><a href="../../index.html#footer">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Project Header -->
+    <section class="project-header-section">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../../index.html">Switch</a>
+                <span class="separator">/</span>
+                <a href="competences.html">Compétences</a>
+                <span class="separator">/</span>
+                <span class="current">Compétence 5</span>
+            </div>
+
+            <div class="project-header-content">
+                <div class="project-meta">
+                    <span class="project-number">Compétence 5</span>
+                    <span class="project-status-badge">
+                        <span class="status-dot"></span>
+                        Parcours Cyber
+                    </span>
+                </div>
+
+                <h1 class="project-main-title">🛡️ Surveiller un système d'information sécurisé</h1>
+                
+                <p class="project-subtitle">
+                    Assurer une veille permanente et surveiller activement le comportement des systèmes d'information pour détecter les anomalies et maintenir un niveau de sécurité optimal.
+                </p>
+
+                <div class="project-tags">
+                    <span class="tag">Surveillance</span>
+                    <span class="tag">Sécurité</span>
+                    <span class="tag">Pentest</span>
+                    <span class="tag">Veille</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="project-content-section">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Main Content -->
+                <div class="main-content">
+                    <!-- Introduction -->
+                    <div class="content-block">
+                        <h2 class="content-title">
+                            <span class="icon">📝</span>
+                            Introduction
+                        </h2>
+                        <div class="content-body">
+                            <p>
+                                Cette section reprend toutes les composantes essentielles de l'UE "Surveiller un système d'information sécurisé" avec tous les apprentissages critiques de la 2ème année en parcours cyber.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Composantes Essentielles -->
+                    <div class="content-block">
+                        <h2 class="content-title">
+                            <span class="icon">🔑</span>
+                            Composantes essentielles (CE)
+                        </h2>
+                        <div class="content-body">
+                            <p style="margin-bottom: 20px;">Il s'agit des savoir-être et des méthodologies transversales appliquées tout au long du cursus.</p>
+                            
+                            <div class="ce-section">
+                                <div class="ce-card">
+                                    <div class="ce-title">CE5.01 | Assurer une veille permanente</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve d'obtention :</div>
+                                        <div class="proof-text">Acquise avec la SAE 3.04 lors de la découverte des failles liées aux anciennes versions des logiciels. Cette expérience a démontré la nécessité absolue d'être toujours à jour sur les vulnérabilités.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ce-card">
+                                    <div class="ce-title">CE5.02 | Réaliser les mises à jour critiques</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve d'obtention :</div>
+                                        <div class="proof-text">Pas encore acquise.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ce-card">
+                                    <div class="ce-title">CE5.03 | Automatiser des tâches</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve d'obtention :</div>
+                                        <div class="proof-text">Acquise grâce aux ressources d'apprentissage de scripting PowerShell et Bash, ainsi que par la mise en pratique concrète pendant mon Stage.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ce-card">
+                                    <div class="ce-title">CE5.04 | S'intégrer dans une équipe</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve d'obtention :</div>
+                                        <div class="proof-text">Validée lors des différentes SAE réalisées en groupe tout au long de l'année.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ce-card">
+                                    <div class="ce-title">CE5.05 | Surveiller le comportement du réseau</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve d'obtention :</div>
+                                        <div class="proof-text">Acquise avec l'utilisation des différents outils d'analyse de trafic réseau (sniffing, analyse de logs) lors des simulations d'attaques de la SAE 3.04.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ce-card">
+                                    <div class="ce-title">CE5.06 | Veiller au respect des contrats et à la conformité</div>
+                                    <div class="ce-description">Des obligations du système d'information.</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve d'obtention :</div>
+                                        <div class="proof-text">En cours d'obtention avec la SAE 4.01, qui intègre des notions de conformité infrastructurelle.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Apprentissages Critiques Cyber -->
+                    <div class="content-block niveau-section">
+                        <span class="niveau-badge">🔐 Parcours Cyber : Niveau 2</span>
+                        <h2 class="content-title">
+                            <span class="icon">🛡️</span>
+                            Apprentissages critiques - Prendre en main les outils de surveillance et de test du système d'information
+                        </h2>
+                        <div class="content-body">
+                            <p style="margin-bottom: 20px;">Compétences spécifiques à la surveillance et au test des défenses.</p>
+                            
+                            <div class="ac-section">
+                                <div class="ac-card">
+                                    <div class="ac-title">AC25.01Cyber | Administrer les protections contre les logiciels malveillants</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Pas encore acquis.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC25.02Cyber | Prendre en main des outils de test de pénétration réseau/système</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Acquis tout au long de la SAE 3.04 (Pentest), à travers l'utilisation d'outils offensifs pour tester la robustesse des systèmes.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BUT 3 : Niveau 3 -->
+                    <div class="content-block niveau-section">
+                        <span class="niveau-badge">🔍 BUT 3 : Niveau 3 (Troisième année)</span>
+                        <h2 class="content-title">
+                            <span class="icon">🚀</span>
+                            Mettre en œuvre le système de surveillance d'incidents de sécurité
+                        </h2>
+                        <div class="content-body">
+                            <div class="ac-section">
+                                <div class="ac-card">
+                                    <div class="ac-title">AC35.01Cyber | Surveiller l'activité du système d'information</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Validée lors de la SAE 4.01 (Stage) par la mise en place et l'administration d'outils de surveillance (SIEM, monitoring réseau, analyse de logs) pour détecter les anomalies et les comportements suspects dans l'infrastructure de l'entreprise d'accueil.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC35.02Cyber | Appliquer une méthodologie de tests de pénétration</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Acquise lors de la SAE 3.04 (Pentest) avec l'application de méthodologies structurées de tests d'intrusion (reconnaissance, scanning, exploitation, post-exploitation) et renforcée lors de la SAE 4.01 par l'application de ces connaissances en environnement professionnel réel.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC35.03Cyber | Réagir face à un incident de sécurité</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Obtenue lors de la SAE 4.01 (Stage) par la participation à la gestion d'incidents de sécurité, incluant l'identification, la qualification, le confinement et l'analyse post-incident. Complétée par les procédures de réponse aux incidents étudiées dans la SAE 3.04.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC35.04Cyber | Administrer les outils de surveillance du système d'information</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Validée lors de la SAE 4.01 (Stage) par la configuration et l'administration quotidienne des outils de surveillance et de monitoring, incluant la gestion des alertes, l'optimisation des règles de détection et la maintenance des systèmes de collecte de logs.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="sidebar-block">
+                        <h3 class="sidebar-title">
+                            <span class="icon">📊</span>
+                            Informations
+                        </h3>
+                        <div class="sidebar-content">
+                            <div class="info-item">
+                                <span class="label">Type</span>
+                                <span class="value">Parcours Cyber</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Parcours</span>
+                                <span class="value">Cybersécurité</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Composantes Essentielles</span>
+                                <span class="value">6 CE</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">AC Niveau 2 (BUT2)</span>
+                                <span class="value">2 AC</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">AC Niveau 3 (BUT3)</span>
+                                <span class="value">4 AC</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-block">
+                        <h3 class="sidebar-title">
+                            <span class="icon">🔗</span>
+                            SAE Associées
+                        </h3>
+                        <div class="sidebar-content">
+                            <ul class="related-list">
+                                <li><a href="../semestre_3/projet-4.html">SAE 3.04 - Pentest</a></li>
+                                <li><a href="../semestre_4/projet-1.html">SAE 4.01 - Stage</a></li>
+                                <li><a href="../semestre_5/projet-1.html">SAE 5.01 - IoT LoRaWan</a></li>
+                                <li><a href="../semestre_5/projet-2.html">SAE 5.02 - Instravel</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Navigation</h3>
+                    <div class="footer-links">
+                        <a href="competences.html">← Retour Compétences</a>
+                        <a href="../../index.html">Switch Principal</a>
+                    </div>
+                </div>
+
+                <div class="footer-section contact-info">
+                    <div class="contact-item">
+                        <span class="icon">📧</span>
+                        <a href="mailto:thibaut.karcher@uha.fr">thibaut.karcher@uha.fr</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">📱</span>
+                        <span>+33 6 08 36 93 45</span>
+                    </div>
+                </div>
+
+                <div class="footer-section social-links">
+                    <a href="https://github.com/ThibautKarcher" target="_blank" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/thibaut-karcher/" target="_blank" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Portfolio Network-Centric | Compétence 5 - Surveiller un système d'information sécurisé</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compétence 2 - Connecter les entreprises et les usagers</title>
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/semester.css">
+    <link rel="stylesheet" href="../../styles/project.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        .ce-section, .ac-section {
+            margin-bottom: 30px;
+        }
+
+        .ce-card, .ac-card {
+            background: rgba(30, 41, 59, 0.6);
+            border: 1px solid rgba(100, 116, 139, 0.3);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .ce-card:hover, .ac-card:hover {
+            border-color: rgba(59, 130, 246, 0.5);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.1);
+        }
+
+        .ce-title, .ac-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--accent-blue);
+            margin-bottom: 10px;
+        }
+
+        .ce-description, .ac-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .proof {
+            background: rgba(59, 130, 246, 0.1);
+            border-left: 3px solid var(--accent-blue);
+            padding: 12px 15px;
+            margin-top: 10px;
+            border-radius: 4px;
+        }
+
+        .proof-label {
+            font-weight: 600;
+            color: var(--accent-blue);
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+
+        .proof-text {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .niveau-section {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid rgba(100, 116, 139, 0.3);
+        }
+
+        .niveau-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            background: linear-gradient(135deg, var(--accent-blue), #2563eb);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../../index.html" style="text-decoration: none;">
+                    <span class="terminal-prompt">root@portfolio:~#</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="competences.html">← Retour Compétences</a></li>
+                <li><a href="../../index.html">Switch</a></li>
+                <li><a href="../../index.html#footer">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Project Header -->
+    <section class="project-header-section">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../../index.html">Switch</a>
+                <span class="separator">/</span>
+                <a href="competences.html">Compétences</a>
+                <span class="separator">/</span>
+                <span class="current">Compétence 2</span>
+            </div>
+
+            <div class="project-header-content">
+                <div class="project-meta">
+                    <span class="project-number">Compétence 2</span>
+                    <span class="project-status-badge">
+                        <span class="status-dot"></span>
+                        Compétence Commune
+                    </span>
+                </div>
+
+                <h1 class="project-main-title">🌐 Connecter les entreprises et les usagers</h1>
+                
+                <p class="project-subtitle">
+                    Concevoir et déployer des solutions de connectivité adaptées aux besoins des organisations et des utilisateurs à travers les composantes essentielles et les apprentissages critiques de BUT1 et BUT2.
+                </p>
+
+                <div class="project-tags">
+                    <span class="tag">Connectivité</span>
+                    <span class="tag">Transmission</span>
+                    <span class="tag">ToIP</span>
+                    <span class="tag">VPN</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="project-content-section">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Main Content -->
+                <div class="main-content">
+                    <!-- Introduction -->
+                    <div class="content-block">
+                        <h2 class="content-title">
+                            <span class="icon">📝</span>
+                            Introduction
+                        </h2>
+                        <div class="content-body">
+                            <p>
+                                Cette section reprend toutes les composantes essentielles de l'UE "Connecter les entreprises et les usagers" avec tous les apprentissages critiques de la 1ère année (BUT 1) et de la 2ème année (BUT 2).
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Composantes Essentielles -->
+                    <div class="content-block">
+                        <h2 class="content-title">
+                            <span class="icon">🔑</span>
+                            Composantes essentielles (CE)
+                        </h2>
+                        <div class="content-body">
+                            <p style="margin-bottom: 20px;">Il s'agit des savoir-être et des méthodologies transversales appliquées tout au long du cursus.</p>
+                            
+                            <div class="ce-section">
+                                <div class="ce-card">
+                                    <div class="ce-title">CE2.01 | Communiquer avec le client et les différents acteurs impliqués</div>
+                                    <div class="ce-description">Parfois en anglais.</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve d'obtention :</div>
+                                        <div class="proof-text">Validée lors des SAE 1.03, SAE 3.01 et SAE 3.02 par le respect strict du cahier des charges, une répartition efficace des tâches en groupe et l'explication claire des résultats techniques au client.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ce-card">
+                                    <div class="ce-title">CE2.02 | Faire preuve d'une démarche scientifique</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve d'obtention :</div>
+                                        <div class="proof-text">Obtenue grâce aux nombreuses mesures et au travail d'analyse en amont de la SAE 1.03. Elle a également été démontrée lors des recherches comparatives pour déterminer les meilleurs composants dans la SAE 3.01 et durant mon Stage.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ce-card">
+                                    <div class="ce-title">CE2.03 | Choisir les solutions et technologies adaptées</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve d'obtention :</div>
+                                        <div class="proof-text">Validée par le choix pertinent de câblage, de connecteurs compatibles et de points d'accès PoE lors de la SAE 1.03. Dans la même logique, cette compétence s'est illustrée par la sélection des composants matériels de la SAE 3.01 et la configuration système optimale durant mon Stage.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ce-card">
+                                    <div class="ce-title">CE2.04 | Proposer des solutions respectueuses de l'environnement</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve d'obtention :</div>
+                                        <div class="proof-text">Démontrée par l'utilisation de points d'accès Wi-Fi alimentés en PoE (réduction de la consommation énergétique) lors de la SAE 1.03. De plus, la mise en place du Wake-on-LAN lors de mon Stage a permis de maintenir le serveur éteint lorsqu'il n'est pas sollicité, optimisant ainsi son empreinte écologique.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BUT 1 : Niveau 1 -->
+                    <div class="content-block niveau-section">
+                        <span class="niveau-badge">🎓 BUT 1 : Niveau 1 (Première année)</span>
+                        <h2 class="content-title">
+                            <span class="icon">📚</span>
+                            Apprentissages critiques - Découvrir les transmissions et la ToIP 
+                        </h2>
+                        <div class="content-body">
+                            <div class="ac-section">
+                                <div class="ac-card">
+                                    <div class="ac-title">AC12.01 | Mesurer, analyser et commenter les signaux</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Obtenue lors des différentes campagnes de mesures et d'analyses de signaux effectuées durant la SAE 1.03.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC12.02 | Caractériser des systèmes de transmissions élémentaires</div>
+                                    <div class="ac-description">Découvrir la modélisation mathématique de leur fonctionnement.</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">En cours d'acquisition (Prévue dans les SAE 2.02 et 2.04).</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC12.03 | Déployer des supports de transmission</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Validée lors du déploiement physique du point d'accès Wi-Fi et de l'ensemble du câblage associé lors de la SAE 1.03.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC12.04 | Connecter les systèmes de ToIP</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Obtenue lors de la SAE 2.04 avec la mise en place fonctionnelle de la ToIP (Téléphonie sur IP) dans la partie téléphonie du projet.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC12.05 | Communiquer avec un tiers et adapter son discours</div>
+                                    <div class="ac-description">Client, collaborateur... et adapter sa langue à son interlocuteur.</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Validée lors de la préparation et de la réalisation de la soutenance orale de la SAE 1.03.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BUT 2 : Niveau 2 -->
+                    <div class="content-block niveau-section">
+                        <span class="niveau-badge">🎓 BUT 2 : Niveau 2 (Deuxième année)</span>
+                        <h2 class="content-title">
+                            <span class="icon">🚀</span>
+                            Apprentissages critiques -  Maîtriser les différentes composantes des solutions de connexion des entreprises et des usagers 
+                        </h2>
+                        <div class="content-body">
+                            <div class="ac-section">
+                                <div class="ac-card">
+                                    <div class="ac-title">AC22.01 | Déployer et caractériser des systèmes de transmissions complexes</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Acquise tout au long de la SAE 3.01 et à travers l'exploitation de ses ressources associées.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC22.02 | Mettre en place un accès distant sécurisé</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Acquise lors de la configuration et de la mise en place d'un tunnel VPN sécurisé dans le cadre de la SAE 4.01 Cyber.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC22.03 | Mettre en place une connexion multi-site via un réseau opérateur</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Obtenue par la conception et la mise en place de l'infrastructure FAI simulée de la SAE 3.03.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC22.04 | Déployer des réseaux d'accès des opérateurs</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Comme pour la compétence précédente, acquise lors de la configuration technique du FAI dans la SAE 3.03.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC22.05 | Capacité à questionner un cahier des charges RT</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Validée de manière transversale dans toutes les SAE basées sur un cahier des charges client imposé : SAE 3.01, SAE 3.02 et SAE 3.03.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BUT 3 : Niveau 3 -->
+                    <div class="content-block niveau-section">
+                        <span class="niveau-badge">🎓 BUT 3 : Niveau 3 (Troisième année)</span>
+                        <h2 class="content-title">
+                            <span class="icon">🚀</span>
+                            Apprentissages critiques - Déployer une solution de connexion ou de communication sur IP
+                        </h2>
+                        <div class="content-body">
+                            <div class="ac-section">
+                                <div class="ac-card">
+                                    <div class="ac-title">AC32.01 | Déployer un système de communication pour l'entreprise</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Validée lors de la SAE 5.01 par le déploiement d'un système de communication IoT LoRaWan permettant la transmission de données de géolocalisation en temps réel, ainsi que par la mise en place de l'infrastructure de communication de l'application Instravel (SAE 5.02).</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC32.02 | Déployer un réseau d'accès sans fil pour le réseau d'entreprise en intégrant les enjeux de la sécurité</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Acquise lors de la SAE 5.01 avec le déploiement du réseau LoRaWan, intégrant les mécanismes de sécurité propres au protocole (chiffrement AES, authentification des devices) et l'optimisation de la portée sans fil pour le tracking GPS.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC32.03 | Déployer un réseau d'accès fixe ou mobile pour un opérateur de télécommunications en intégrant la sécurité</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Obtenue par la conception et le déploiement de l'infrastructure réseau de la SAE 5.01, permettant l'accès mobile des équipements IoT via LoRaWan avec gestion de la mobilité des trackers GPS et sécurisation des communications.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC32.04 | Permettre aux collaborateurs de se connecter de manière sécurisée au système d'information de l'entreprise</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Validée lors de la SAE 5.02 par la mise en place d'un système d'authentification sécurisé pour l'application Instravel, incluant la gestion des sessions utilisateurs, le chiffrement des communications HTTPS et la protection des données sensibles en base.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC32.05 | Collaborer en mode projet en français et en anglais</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Compétence transversale acquise lors des projets SAE 5.01 et SAE 5.02 en équipe, avec documentation technique rédigée en français et utilisation de ressources techniques internationales en anglais. Renforcée lors du stage SAE 4.01 en environnement professionnel.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="sidebar-block">
+                        <h3 class="sidebar-title">
+                            <span class="icon">📊</span>
+                            Informations
+                        </h3>
+                        <div class="sidebar-content">
+                            <div class="info-item">
+                                <span class="label">Type</span>
+                                <span class="value">Compétence Commune</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Parcours</span>
+                                <span class="value">BUT R&T</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Composantes Essentielles</span>
+                                <span class="value">4 CE</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">AC Niveau 1</span>
+                                <span class="value">5 AC</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">AC Niveau 2</span>
+                                <span class="value">5 AC</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">AC Niveau 3</span>
+                                <span class="value">5 AC</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-block">
+                        <h3 class="sidebar-title">
+                            <span class="icon">🔗</span>
+                            SAE Associées
+                        </h3>
+                        <div class="sidebar-content">
+                            <ul class="related-list">
+                                <li><a href="../semestre_1/projet-3.html">SAE 1.03 - Déploiement Wi-Fi</a></li>
+                                <li><a href="../semestre_2/projet-2.html">SAE 2.02 - Transmissions</a></li>
+                                <li><a href="../semestre_2/projet-3.html">SAE 2.04 - ToIP</a></li>
+                                <li><a href="../semestre_3/projet-1.html">SAE 3.01 - Infrastructure</a></li>
+                                <li><a href="../semestre_3/projet-2.html">SAE 3.02 - Projet client</a></li>
+                                <li><a href="../semestre_3/projet-3.html">SAE 3.03 - FAI et routage</a></li>
+                                <li><a href="../semestre_4/projet-1.html">SAE 4.01 - Stage</a></li>
+                                <li><a href="../semestre_5/projet-1.html">SAE 5.01 - IoT LoRaWan</a></li>
+                                <li><a href="../semestre_5/projet-2.html">SAE 5.02 - Instravel</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Navigation</h3>
+                    <div class="footer-links">
+                        <a href="competences.html">← Retour Compétences</a>
+                        <a href="../../index.html">Switch Principal</a>
+                    </div>
+                </div>
+
+                <div class="footer-section contact-info">
+                    <div class="contact-item">
+                        <span class="icon">📧</span>
+                        <a href="mailto:thibaut.karcher@uha.fr">thibaut.karcher@uha.fr</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">📱</span>
+                        <span>+33 6 08 36 93 45</span>
+                    </div>
+                </div>
+
+                <div class="footer-section social-links">
+                    <a href="https://github.com/ThibautKarcher" target="_blank" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/thibaut-karcher/" target="_blank" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Portfolio Network-Centric | Compétence 2 - Connecter les entreprises et les usagers</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compétence 3 - Créer des outils et des applications pour les R&T</title>
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/semester.css">
+    <link rel="stylesheet" href="../../styles/project.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        .ce-section, .ac-section {
+            margin-bottom: 30px;
+        }
+
+        .ce-card, .ac-card {
+            background: rgba(30, 41, 59, 0.6);
+            border: 1px solid rgba(100, 116, 139, 0.3);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .ce-card:hover, .ac-card:hover {
+            border-color: rgba(59, 130, 246, 0.5);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.1);
+        }
+
+        .ce-title, .ac-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--accent-blue);
+            margin-bottom: 10px;
+        }
+
+        .ce-description, .ac-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .proof {
+            background: rgba(59, 130, 246, 0.1);
+            border-left: 3px solid var(--accent-blue);
+            padding: 12px 15px;
+            margin-top: 10px;
+            border-radius: 4px;
+        }
+
+        .proof-label {
+            font-weight: 600;
+            color: var(--accent-blue);
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+
+        .proof-text {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .niveau-section {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid rgba(100, 116, 139, 0.3);
+        }
+
+        .niveau-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            background: linear-gradient(135deg, var(--accent-blue), #2563eb);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../../index.html" style="text-decoration: none;">
+                    <span class="terminal-prompt">root@portfolio:~#</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="competences.html">← Retour Compétences</a></li>
+                <li><a href="../../index.html">Switch</a></li>
+                <li><a href="../../index.html#footer">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Project Header -->
+    <section class="project-header-section">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../../index.html">Switch</a>
+                <span class="separator">/</span>
+                <a href="competences.html">Compétences</a>
+                <span class="separator">/</span>
+                <span class="current">Compétence 3</span>
+            </div>
+
+            <div class="project-header-content">
+                <div class="project-meta">
+                    <span class="project-number">Compétence 3</span>
+                    <span class="project-status-badge">
+                        <span class="status-dot"></span>
+                        Compétence Commune
+                    </span>
+                </div>
+
+                <h1 class="project-main-title">💻 Créer des outils et des applications pour les R&T</h1>
+                
+                <p class="project-subtitle">
+                    Développer des applications et des outils logiciels adaptés aux problématiques des réseaux et télécommunications à travers les composantes essentielles et les apprentissages critiques de BUT1 et BUT2.
+                </p>
+
+                <div class="project-tags">
+                    <span class="tag">Développement</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Web</span>
+                    <span class="tag">Automatisation</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="project-content-section">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Main Content -->
+                <div class="main-content">
+                    <!-- Introduction -->
+                    <div class="content-block">
+                        <h2 class="content-title">
+                            <span class="icon">📝</span>
+                            Introduction
+                        </h2>
+                        <div class="content-body">
+                            <p>
+                                Cette section reprend toutes les composantes essentielles de l'UE "Créer des outils et des applications pour les R&T" avec tous les apprentissages critiques de la 1ère année (BUT 1) et de la 2ème année (BUT 2).
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Composantes Essentielles -->
+                    <div class="content-block">
+                        <h2 class="content-title">
+                            <span class="icon">🔑</span>
+                            Composantes essentielles (CE)
+                        </h2>
+                        <div class="content-body">
+                            <p style="margin-bottom: 20px;">Il s'agit des savoir-être et des méthodologies transversales appliquées tout au long du cursus.</p>
+                            
+                            <div class="ce-section">
+                                <div class="ce-card">
+                                    <div class="ce-title">CE3.01 | Être à l'écoute des besoins du client</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve d'obtention :</div>
+                                        <div class="proof-text">Validée par le respect des consignes lors de la création du site web de la SAE 1.04, ainsi que lors des différentes SAE demandant des spécifications techniques ou des outils précis dans les cahiers des charges (notamment la SAE 3.02).</div>
+                                    </div>
+                                </div>
+
+                                <div class="ce-card">
+                                    <div class="ce-title">CE3.02 | Documenter le travail réalisé</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve d'obtention :</div>
+                                        <div class="proof-text">Composante acquise systématiquement avec les documentations techniques et rapports à réaliser lors de la plupart des SAE.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ce-card">
+                                    <div class="ce-title">CE3.03 | Utiliser les outils numériques à bon escient</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve d'obtention :</div>
+                                        <div class="proof-text">Obtenue avec l'utilisation d'éditeurs de code afin de générer des scripts Python lors de la SAE 1.05 et de la SAE 3.02, ou encore avec les outils de simulation réseau comme GNS3 dans la SAE 3.03.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ce-card">
+                                    <div class="ce-title">CE3.04 | Choisir les outils de développement adaptés</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve d'obtention :</div>
+                                        <div class="proof-text">Démontrée par l'utilisation pertinente des différents environnements de développement (IDE) et éditeurs de code lors des SAE 1.04, SAE 1.05 et SAE 3.02.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ce-card">
+                                    <div class="ce-title">CE3.05 | Intégrer les problématiques de sécurité</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve d'obtention :</div>
+                                        <div class="proof-text">Validée initialement lors de la SAE 1.05 (attaques réseaux), puis renforcée dans les différentes SAE du parcours Cyber : SAE 3.03 et SAE 3.04.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BUT 1 : Niveau 1 -->
+                    <div class="content-block niveau-section">
+                        <span class="niveau-badge">🎓 BUT 1 : Niveau 1 (Première année)</span>
+                        <h2 class="content-title">
+                            <span class="icon">📚</span>
+                            Apprentissages critiques - S’intégrer dans un service informatique
+                        </h2>
+                        <div class="content-body">
+                            <div class="ac-section">
+                                <div class="ac-card">
+                                    <div class="ac-title">AC13.01 | Utiliser un système informatique et ses outils</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Obtenue lors de la création de la page web de la SAE 1.04 et lors de la mise en place et l'utilisation des différents programmes Python de la SAE 1.05.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC13.02 | Lire, exécuter, corriger et modifier un programme</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Validée par le travail de débogage et d'amélioration du code tout au long du projet de la SAE 1.05.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC13.03 | Traduire un algorithme, dans un langage et pour un environnement donné</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Obtenue avec l'implémentation de scripts Python exécutés dans un shell sur une machine physique lors de la SAE 1.05.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC13.04 | Connaître l'architecture et les technologies d'un site Web</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Acquise lors de l'ensemble du projet de la SAE 1.04, de la structuration HTML à la mise en forme CSS du site web.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC13.05 | Choisir les mécanismes de gestion de données adaptés</div>
+                                    <div class="ac-description">Au développement de l'outil et argumenter ses choix.</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Validée lors de la programmation de l'attaque "Man-in-the-Middle" de la SAE 1.05, nécessitant une gestion précise des paquets réseaux.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC13.06 | S'intégrer dans un environnement propice au développement</div>
+                                    <div class="ac-description">Et au travail collaboratif.</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Obtenue lors de la SAE 1.05 grâce au travail en binôme pour la création et la fusion des programmes.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BUT 2 : Niveau 2 -->
+                    <div class="content-block niveau-section">
+                        <span class="niveau-badge">🎓 BUT 2 : Niveau 2 (Deuxième année)</span>
+                        <h2 class="content-title">
+                            <span class="icon">🚀</span>
+                            Apprentissages critiques - Développer une application R&T
+                        </h2>
+                        <div class="content-body">
+                            <div class="ac-section">
+                                <div class="ac-card">
+                                    <div class="ac-title">AC23.01 | Automatiser l'administration système avec des scripts</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Acquise via l'étude des ressources Bash et PowerShell, et compétence revue et appliquée lors de mon Stage.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC23.02 | Développer une application à partir d'un cahier des charges donné</div>
+                                    <div class="ac-description">Pour le Web ou les périphériques mobiles.</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Validée lors de la réalisation de l'application Client/Serveur de la SAE 3.02.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC23.03 | Utiliser un protocole réseau pour programmer une application client/serveur</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Acquise avec l'utilisation et la programmation des sockets réseaux, toujours lors de la SAE 3.02.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC23.04 | Installer, administrer un système de gestion de données</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Obtenue lors de la SAE 3.02 avec la gestion des programmes à compiler, exécuter et la manipulation des données associées.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC23.05 | Accéder à un ensemble de données depuis une application et/ou un site web</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Acquise avec la SAE 3.01 via la mise en place du broker MQTT pour la collecte de données IoT, et lors de la SAE 3.02 avec l'affichage des retours programmes et informations via les interfaces utilisateurs (UI) clients et serveurs.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BUT 3 : Niveau 3 -->
+                    <div class="content-block niveau-section">
+                        <span class="niveau-badge">🎓 BUT 3 : Niveau 3 (Troisième année)</span>
+                        <h2 class="content-title">
+                            <span class="icon">🚀</span>
+                            Apprentissages critiques - Piloter un projet de développement d'une application R&T
+                        </h2>
+                        <div class="content-body">
+                            <div class="ac-section">
+                                <div class="ac-card">
+                                    <div class="ac-title">AC33.01 | Élaborer les spécifications techniques et le cahier des charges d'une application informatique</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Validée lors de la SAE 5.01 par la rédaction des spécifications techniques du système de tracking IoT (architecture LoRaWan, protocoles, contraintes énergétiques) et lors de la SAE 5.02 avec l'élaboration du cahier des charges de l'application web Instravel (fonctionnalités, architecture, base de données).</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC33.02 | Mettre en place un environnement de travail collaboratif</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Acquise lors des projets SAE 5.01 et SAE 5.02 en équipe, avec utilisation de Git pour la gestion de versions, mise en place d'environnements de développement partagés (conteneurs Docker pour SAE 5.02) et organisation du travail en méthodologie agile.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC33.03 | Participer à la formation des utilisateurs</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Obtenue lors de la présentation et démonstration des projets SAE 5.01 et SAE 5.02 aux évaluateurs, incluant l'explication du fonctionnement des systèmes, la documentation utilisateur et les guides de prise en main des solutions développées.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC33.04 | Déployer et maintenir une solution informatique</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Validée lors de la SAE 5.02 avec le déploiement de l'application Instravel via Docker, incluant la conteneurisation, l'orchestration des services, la gestion des bases de données et la mise en place de procédures de maintenance et de mise à jour.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC33.05 | S'informer sur les évolutions et les nouveautés technologiques</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Compétence transversale acquise tout au long du BUT 3, notamment lors de l'intégration de technologies récentes : LoRaWan et IoT pour la SAE 5.01, frameworks web modernes et conteneurisation Docker pour la SAE 5.02, ainsi que par la veille technologique continue durant le stage SAE 4.01.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC33.06 | Sécuriser l'environnement numérique d'une application</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Acquise lors de la SAE 5.02 par l'implémentation de mécanismes de sécurité pour Instravel : authentification utilisateur, gestion sécurisée des sessions, chiffrement HTTPS, protection contre les injections SQL et validation des entrées utilisateur. Renforcée par les principes de sécurité appliqués dans la SAE 5.01 (chiffrement LoRaWan).</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="sidebar-block">
+                        <h3 class="sidebar-title">
+                            <span class="icon">📊</span>
+                            Informations
+                        </h3>
+                        <div class="sidebar-content">
+                            <div class="info-item">
+                                <span class="label">Type</span>
+                                <span class="value">Compétence Commune</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Parcours</span>
+                                <span class="value">BUT R&T</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Composantes Essentielles</span>
+                                <span class="value">5 CE</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">AC Niveau 1</span>
+                                <span class="value">6 AC</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">AC Niveau 2</span>
+                                <span class="value">5 AC</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">AC Niveau 3</span>
+                                <span class="value">6 AC</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-block">
+                        <h3 class="sidebar-title">
+                            <span class="icon">🔗</span>
+                            SAE Associées
+                        </h3>
+                        <div class="sidebar-content">
+                            <ul class="related-list">
+                                <li><a href="../semestre_1/projet-4.html">SAE 1.04 - Site web</a></li>
+                                <li><a href="../semestre_1/projet-5.html">SAE 1.05 - Attaques réseau</a></li>
+                                <li><a href="../semestre_3/projet-1.html">SAE 3.01 - Infrastructure IoT</a></li>
+                                <li><a href="../semestre_3/projet-2.html">SAE 3.02 - Client/Serveur</a></li>
+                                <li><a href="../semestre_3/projet-3.html">SAE 3.03 - FAI et routage</a></li>
+                                <li><a href="../semestre_3/projet-4.html">SAE 3.04 - Pentest</a></li>
+                                <li><a href="../semestre_4/projet-1.html">SAE 4.01 - Stage</a></li>
+                                <li><a href="../semestre_5/projet-1.html">SAE 5.01 - IoT LoRaWan</a></li>
+                                <li><a href="../semestre_5/projet-2.html">SAE 5.02 - Instravel</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Navigation</h3>
+                    <div class="footer-links">
+                        <a href="competences.html">← Retour Compétences</a>
+                        <a href="../../index.html">Switch Principal</a>
+                    </div>
+                </div>
+
+                <div class="footer-section contact-info">
+                    <div class="contact-item">
+                        <span class="icon">📧</span>
+                        <a href="mailto:thibaut.karcher@uha.fr">thibaut.karcher@uha.fr</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">📱</span>
+                        <span>+33 6 08 36 93 45</span>
+                    </div>
+                </div>
+
+                <div class="footer-section social-links">
+                    <a href="https://github.com/ThibautKarcher" target="_blank" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/thibaut-karcher/" target="_blank" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Portfolio Network-Centric | Compétence 3 - Créer des outils et des applications pour les R&T</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

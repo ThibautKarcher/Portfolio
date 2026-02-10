@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compétence 4 - Administrer un système d'information sécurisé</title>
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/semester.css">
+    <link rel="stylesheet" href="../../styles/project.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        .ce-section, .ac-section {
+            margin-bottom: 30px;
+        }
+
+        .ce-card, .ac-card {
+            background: rgba(30, 41, 59, 0.6);
+            border: 1px solid rgba(100, 116, 139, 0.3);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .ce-card:hover, .ac-card:hover {
+            border-color: rgba(239, 68, 68, 0.5);
+            box-shadow: 0 4px 15px rgba(239, 68, 68, 0.1);
+        }
+
+        .ce-title, .ac-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #ef4444;
+            margin-bottom: 10px;
+        }
+
+        .ce-description, .ac-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .proof {
+            background: rgba(239, 68, 68, 0.1);
+            border-left: 3px solid #ef4444;
+            padding: 12px 15px;
+            margin-top: 10px;
+            border-radius: 4px;
+        }
+
+        .proof-label {
+            font-weight: 600;
+            color: #ef4444;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+
+        .proof-text {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .niveau-section {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid rgba(100, 116, 139, 0.3);
+        }
+
+        .niveau-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .project-status-badge {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            color: #000000 !important;
+            border-color: #dc2626;
+        }
+
+        .status-dot {
+            background-color: #000000;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../../index.html" style="text-decoration: none;">
+                    <span class="terminal-prompt">root@portfolio:~#</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="competences.html">← Retour Compétences</a></li>
+                <li><a href="../../index.html">Switch</a></li>
+                <li><a href="../../index.html#footer">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Project Header -->
+    <section class="project-header-section">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../../index.html">Switch</a>
+                <span class="separator">/</span>
+                <a href="competences.html">Compétences</a>
+                <span class="separator">/</span>
+                <span class="current">Compétence 4</span>
+            </div>
+
+            <div class="project-header-content">
+                <div class="project-meta">
+                    <span class="project-number">Compétence 4</span>
+                    <span class="project-status-badge">
+                        <span class="status-dot"></span>
+                        Parcours Cybersécurité
+                    </span>
+                </div>
+
+                <h1 class="project-main-title">🔒 Administrer un système d'information sécurisé</h1>
+                
+                <p class="project-subtitle">
+                    Gérer et sécuriser les systèmes d'information en appliquant les bonnes pratiques de sécurité et en respectant les normes en vigueur à travers les composantes essentielles et les apprentissages critiques du parcours Cyber.
+                </p>
+
+                <div class="project-tags">
+                    <span class="tag">Cybersécurité</span>
+                    <span class="tag">Infrastructure</span>
+                    <span class="tag">Hardening</span>
+                    <span class="tag">Cryptographie</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="project-content-section">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Main Content -->
+                <div class="main-content">
+                    <!-- Introduction -->
+                    <div class="content-block">
+                        <h2 class="content-title">
+                            <span class="icon">📝</span>
+                            Introduction
+                        </h2>
+                        <div class="content-body">
+                            <p>
+                                Cette section reprend toutes les composantes essentielles de l'UE "Administrer un système d'information sécurisé" avec tous les apprentissages critiques de la 2ème année en parcours cyber.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Composantes Essentielles -->
+                    <div class="content-block">
+                        <h2 class="content-title">
+                            <span class="icon">🔑</span>
+                            Composantes essentielles (CE)
+                        </h2>
+                        <div class="content-body">
+                            <p style="margin-bottom: 20px;">Il s'agit des savoir-être et des méthodologies transversales appliquées tout au long du cursus.</p>
+                            
+                            <div class="ce-section">
+                                <div class="ce-card">
+                                    <div class="ce-title">CE4.01 | Viser un juste compromis entre exigences de sécurité et contraintes d'utilisation</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve d'obtention :</div>
+                                        <div class="proof-text">Globalement acquise à travers les 3 SAE de parcours, nécessitant d'équilibrer la protection des systèmes et leur utilisabilité opérationnelle.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ce-card">
+                                    <div class="ce-title">CE4.02 | Respecter les normes et le cadre juridique</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve d'obtention :</div>
+                                        <div class="proof-text">La SAE 3.04 et les ressources associées nous ont appris à effectuer ces pratiques dans le respect des normes, en utilisant des labs isolés et spécifiquement conçus pour ces exercices (éthique du hacking).</div>
+                                    </div>
+                                </div>
+
+                                <div class="ce-card">
+                                    <div class="ce-title">CE4.03 | Intégrer les dernières technologies</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve d'obtention :</div>
+                                        <div class="proof-text">Cette compétence a principalement été acquise lors de la SAE 3.04 (Pentesting), au cours de laquelle nous avons appris que la veille technologique et l'utilisation des outils les plus récents sont fondamentales pour contrer les menaces actuelles.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ce-card">
+                                    <div class="ce-title">CE4.04 | Travailler en équipe</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve d'obtention :</div>
+                                        <div class="proof-text">En cours d'acquisition : La SAE 4.01, actuellement en cours de réalisation, s'effectue en groupe et permet de valider cette dynamique collaborative.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ce-card">
+                                    <div class="ce-title">CE4.05 | Sensibiliser efficacement des utilisateurs</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve d'obtention :</div>
+                                        <div class="proof-text">Non acquise pour le moment. (Sera validée ultérieurement dans le cursus ou lors de stages futurs).</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Apprentissages Critiques -->
+                    <div class="content-block niveau-section">
+                        <span class="niveau-badge">🛡️ Apprentissages Critiques : Parcours Cyber</span>
+                        <h2 class="content-title">
+                            <span class="icon">🎯</span>
+                            BUT2 : Sensibiliser aux vulnérabilités d'un système d'information et aux remédiations possibles
+                        </h2>
+                        <div class="content-body">
+                            <div class="ac-section">
+                                <div class="ac-card">
+                                    <div class="ac-title">AC24.01Cyber | Connaître et utiliser les bonnes pratiques et les recommandations de cybersécurité</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Acquis avec la découverte des différentes failles des réseaux et des services, l'apprentissage des contre-mesures associées et l'application des bonnes pratiques de durcissement (hardening).</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC24.02Cyber | Mettre en œuvre les outils fondamentaux de sécurisation d'une infrastructure du réseau</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">En cours d'acquisition avec la SAE 4.01, notamment par la mise en place de pare-feux et de segmentations réseaux.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC24.03Cyber | Sécuriser les services</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">En cours d'acquisition lors de la mise en place des services sécurisés par certificats TLS / SSL dans le cadre de la SAE 4.01.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC24.04Cyber | Choisir les outils cryptographiques adaptés au besoin fonctionnel du système d'information</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">En cours d'acquisition avec la création et la gestion d'une Infrastructure de Gestion de Clés (IGC) et de certificats TLS pour la SAE 4.01.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC24.05Cyber | Connaître les différents types d'attaque</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Acquis avec la SAE 3.04 qui couvrait un large spectre de vulnérabilités et de vecteurs d'attaques (Pentesting).</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC24.06Cyber | Comprendre des documents techniques en anglais</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Acquis tout au long de la formation et principalement lors des SAE, où les recherches documentaires et les manuels techniques sont majoritairement en anglais.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BUT 3 : Niveau 3 -->
+                    <div class="content-block niveau-section">
+                        <span class="niveau-badge">🔐 BUT 3 : Niveau 3 (Troisième année)</span>
+                        <h2 class="content-title">
+                            <span class="icon">🚀</span>
+                            Mettre en œuvre un système d'information sécurisé pour une petite structure
+                        </h2>
+                        <div class="content-body">
+                            <div class="ac-section">
+                                <div class="ac-card">
+                                    <div class="ac-title">AC34.01Cyber | Participer activement à une analyse de risque pour définir une politique de sécurité pour une petite structure</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Validée lors de la SAE 4.01 (Stage) par la participation à l'analyse de risque et à la définition des politiques de sécurité de l'infrastructure de l'entreprise d'accueil, incluant l'identification des actifs critiques, l'évaluation des vulnérabilités et la proposition de contre-mesures adaptées.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC34.02Cyber | Mettre en œuvre des outils avancés de sécurisation d'une infrastructure du réseau</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Acquise lors de la SAE 5.01 avec l'implémentation de mécanismes de sécurité avancés pour le réseau LoRaWan (chiffrement AES-128, authentification mutuelle, gestion sécurisée des clés) et lors de la SAE 4.01 avec le déploiement de solutions de sécurisation réseau en environnement professionnel.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC34.03Cyber | Sécuriser les systèmes d'exploitation</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Obtenue lors de la SAE 4.01 (Stage) par l'application de procédures de durcissement (hardening) des systèmes d'exploitation, la gestion des correctifs de sécurité, la configuration de pare-feu locaux et la mise en place de politiques de contrôle d'accès. Renforcée par la sécurisation des environnements de développement dans la SAE 5.02.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC34.04Cyber | Proposer une architecture sécurisée de système d'information pour une petite structure</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Validée lors de la SAE 5.02 par la conception d'une architecture sécurisée pour l'application Instravel, incluant la séparation en couches, l'authentification centralisée, le chiffrement des communications (HTTPS/TLS), la protection contre les attaques web (CSRF, XSS, injections SQL) et la mise en place d'une stratégie de sauvegarde et de continuité.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="sidebar-block">
+                        <h3 class="sidebar-title">
+                            <span class="icon">📊</span>
+                            Informations
+                        </h3>
+                        <div class="sidebar-content">
+                            <div class="info-item">
+                                <span class="label">Type</span>
+                                <span class="value">Parcours Cybersécurité</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Parcours</span>
+                                <span class="value">BUT R&T Cyber</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Composantes Essentielles</span>
+                                <span class="value">5 CE</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">AC Niveau 2 (BUT2)</span>
+                                <span class="value">6 AC</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">AC Niveau 3 (BUT3)</span>
+                                <span class="value">4 AC</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-block">
+                        <h3 class="sidebar-title">
+                            <span class="icon">🔗</span>
+                            SAE Associées
+                        </h3>
+                        <div class="sidebar-content">
+                            <ul class="related-list">
+                                <li><a href="../semestre_3/projet-3.html">SAE 3.03 - FAI et routage</a></li>
+                                <li><a href="../semestre_3/projet-4.html">SAE 3.04 - Pentesting</a></li>
+                                <li><a href="../semestre_4/projet-1.html">SAE 4.01 - Stage</a></li>
+                                <li><a href="../semestre_5/projet-1.html">SAE 5.01 - IoT LoRaWan</a></li>
+                                <li><a href="../semestre_5/projet-2.html">SAE 5.02 - Instravel</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Navigation</h3>
+                    <div class="footer-links">
+                        <a href="competences.html">← Retour Compétences</a>
+                        <a href="../../index.html">Switch Principal</a>
+                    </div>
+                </div>
+
+                <div class="footer-section contact-info">
+                    <div class="contact-item">
+                        <span class="icon">📧</span>
+                        <a href="mailto:thibaut.karcher@uha.fr">thibaut.karcher@uha.fr</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">📱</span>
+                        <span>+33 6 08 36 93 45</span>
+                    </div>
+                </div>
+
+                <div class="footer-section social-links">
+                    <a href="https://github.com/ThibautKarcher" target="_blank" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/thibaut-karcher/" target="_blank" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Portfolio Network-Centric | Compétence 4 - Administrer un système d'information sécurisé</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

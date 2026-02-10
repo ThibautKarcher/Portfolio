@@ -1,0 +1,142 @@
+Current configuration : 2733 bytes
+!
+! No configuration change since last restart
+version 15.1
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname Router
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+!
+no ipv6 cef
+ip source-route
+ip cef
+!
+!
+!
+ip dhcp excluded-address 10.252.18.1 10.252.18.10
+ip dhcp excluded-address 10.252.18.65 10.252.18.74
+ip dhcp excluded-address 10.252.18.129 10.252.18.138
+ip dhcp excluded-address 10.252.18.193 10.252.18.202
+!
+ip dhcp pool Voix
+ network 10.252.18.0 255.255.255.192
+ default-router 10.252.18.1
+ dns-server 10.252.18.132
+!
+ip dhcp pool Users
+ network 10.252.18.64 255.255.255.192
+ default-router 10.252.18.65
+ dns-server 10.252.18.132
+!
+ip dhcp pool Server
+ network 10.252.18.128 255.255.255.192
+ default-router 10.252.18.129
+ dns-server 10.252.18.132
+!
+ip dhcp pool Administrateur
+ network 10.252.18.192 255.255.255.192
+ default-router 10.252.18.193
+ dns-server 10.252.18.132
+!
+!
+multilink bundle-name authenticated
+!
+crypto pki token default removal timeout 0
+!
+!
+license udi pid CISCO1921/K9 sn FCZ1718C0H3
+!
+!
+!
+!
+!
+!
+!
+!
+interface Embedded-Service-Engine0/0
+ no ip address
+ shutdown
+!
+interface GigabitEthernet0/0
+ no ip address
+ ip nat inside
+ ip virtual-reassembly in
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/0.1
+ encapsulation dot1Q 10
+ ip address 10.252.18.1 255.255.255.192
+ ip nat inside
+ ip virtual-reassembly in
+!
+interface GigabitEthernet0/0.2
+ encapsulation dot1Q 20
+ ip address 10.252.18.65 255.255.255.192
+ ip nat inside
+ ip virtual-reassembly in
+!
+interface GigabitEthernet0/0.3
+ encapsulation dot1Q 30
+ ip address 10.252.18.129 255.255.255.192
+ ip nat inside
+ ip virtual-reassembly in
+!
+interface GigabitEthernet0/0.4
+ encapsulation dot1Q 40
+ ip address 10.252.18.193 255.255.255.192
+ ip nat inside
+ ip virtual-reassembly in
+!
+interface GigabitEthernet0/1
+ ip address dhcp
+ ip nat outside
+ ip virtual-reassembly in
+ duplex auto
+ speed auto
+!
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+!
+ip nat inside source list 1 interface GigabitEthernet0/1 overload
+ip route 0.0.0.0 0.0.0.0 GigabitEthernet0/1
+ip route 0.0.0.0 0.0.0.0 10.129.6.1 254
+ip route 0.0.0.0 0.0.0.0 10.129.6.1 254
+!
+access-list 1 permit 10.252.18.0 0.0.0.255
+access-list 5 deny   10.252.18.64 0.0.0.63
+access-list 5 permit any
+access-list 105 deny   ip 10.252.18.64 0.0.0.63 10.252.18.192 0.0.0.63
+access-list 105 permit ip any any
+!
+!
+!
+control-plane
+!
+!
+!
+line con 0
+line aux 0
+line 2
+ no activation-character
+ no exec
+ transport preferred none
+ transport input all
+ transport output pad telnet rlogin lapb-ta mop udptn v120 ssh
+ stopbits 1
+line vty 0 4
+ login
+ transport input all
+!
+scheduler allocate 20000 1000
+end

@@ -300,7 +300,23 @@ body {
 .port:hover {
     transform: translateY(-5px);
     border-color: var(--accent-green);
-    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+    box-shadow: 0 10px 30px rgba(16, 185, 129, 0.2);
+}
+
+/* Trunk port specific hover (compétences) */
+.port[data-semester="competences"]:hover {
+    border-color: var(--accent-blue);
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+}
+
+.port[data-semester="competences"]:hover .rj45-connector {
+    border-color: var(--accent-blue);
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.5), 0 0 10px rgba(59, 130, 246, 0.3);
+}
+
+.port[data-semester="competences"]:hover .led {
+    background-color: var(--accent-blue);
+    box-shadow: 0 0 15px var(--accent-blue);
 }
 
 /* RJ45 Port Style */

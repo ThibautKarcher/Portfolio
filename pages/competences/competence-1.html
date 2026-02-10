@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compétence 1 - Administrer les réseaux et l'internet</title>
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/semester.css">
+    <link rel="stylesheet" href="../../styles/project.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        .ce-section, .ac-section {
+            margin-bottom: 30px;
+        }
+
+        .ce-card, .ac-card {
+            background: rgba(30, 41, 59, 0.6);
+            border: 1px solid rgba(100, 116, 139, 0.3);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .ce-card:hover, .ac-card:hover {
+            border-color: rgba(59, 130, 246, 0.5);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.1);
+        }
+
+        .ce-title, .ac-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--accent-blue);
+            margin-bottom: 10px;
+        }
+
+        .ce-description, .ac-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .proof {
+            background: rgba(59, 130, 246, 0.1);
+            border-left: 3px solid var(--accent-blue);
+            padding: 12px 15px;
+            margin-top: 10px;
+            border-radius: 4px;
+        }
+
+        .proof-label {
+            font-weight: 600;
+            color: var(--accent-blue);
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+
+        .proof-text {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .niveau-section {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid rgba(100, 116, 139, 0.3);
+        }
+
+        .niveau-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            background: linear-gradient(135deg, var(--accent-blue), #2563eb);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../../index.html" style="text-decoration: none;">
+                    <span class="terminal-prompt">root@portfolio:~#</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="competences.html">← Retour Compétences</a></li>
+                <li><a href="../../index.html">Switch</a></li>
+                <li><a href="../../index.html#footer">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Project Header -->
+    <section class="project-header-section">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../../index.html">Switch</a>
+                <span class="separator">/</span>
+                <a href="competences.html">Compétences</a>
+                <span class="separator">/</span>
+                <span class="current">Compétence 1</span>
+            </div>
+
+            <div class="project-header-content">
+                <div class="project-meta">
+                    <span class="project-number">Compétence 1</span>
+                    <span class="project-status-badge">
+                        <span class="status-dot"></span>
+                        Compétence Commune
+                    </span>
+                </div>
+
+                <h1 class="project-main-title">🔧 Administrer les réseaux et l'internet</h1>
+                
+                <p class="project-subtitle">
+                    Maîtriser la gestion, la configuration et l'administration des infrastructures réseau et des services Internet à travers les composantes essentielles et les apprentissages critiques de BUT1 et BUT2.
+                </p>
+
+                <div class="project-tags">
+                    <span class="tag">Réseaux</span>
+                    <span class="tag">Administration</span>
+                    <span class="tag">Services</span>
+                    <span class="tag">Sécurité</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="project-content-section">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Main Content -->
+                <div class="main-content">
+                    <!-- Introduction -->
+                    <div class="content-block">
+                        <h2 class="content-title">
+                            <span class="icon">📝</span>
+                            Introduction
+                        </h2>
+                        <div class="content-body">
+                            <p>
+                                Cette section reprend toutes les composantes essentielles de l'UE "Administrer les réseaux et l'internet" avec tous les apprentissages critiques de la 1ère année (BUT1) et de la 2ème année (BUT2).
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Composantes Essentielles -->
+                    <div class="content-block">
+                        <h2 class="content-title">
+                            <span class="icon">🔑</span>
+                            Composantes essentielles (CE)
+                        </h2>
+                        <div class="content-body">
+                            <p style="margin-bottom: 20px;">Il s'agit des savoir-être et des méthodologies transversales appliquées tout au long du cursus.</p>
+                            
+                            <div class="ce-section">
+                                <div class="ce-card">
+                                    <div class="ce-title">CE1.01 | Choisir les solutions et technologies réseaux adaptées</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve d'obtention :</div>
+                                        <div class="proof-text">Validée lors de la SAE 1.02. Cette compétence a été démontrée lors du choix des équipements réseaux et lors de la mise en place de leurs configurations spécifiques ainsi que des services associés.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ce-card">
+                                    <div class="ce-title">CE1.02 | Respecter les principes fondamentaux de la sécurité informatique</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve d'obtention :</div>
+                                        <div class="proof-text">Validée lors de la SAE 1.01, qui présentait de nombreux concepts clés de sécurité. Elle a été renforcée lors des SAE orientées cybersécurité : SAE 3.03 et SAE 3.04 (Cyber).</div>
+                                    </div>
+                                </div>
+
+                                <div class="ce-card">
+                                    <div class="ce-title">CE1.03 | Utiliser une approche rigoureuse pour la résolution des dysfonctionnements</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve d'obtention :</div>
+                                        <div class="proof-text">Acquise au travers des SAE 1.01, SAE 1.02 et SAE 3.03, notamment lors de la mise en place de services complexes et lors des phases de dépannage (troubleshooting) face aux problèmes réseaux rencontrés.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ce-card">
+                                    <div class="ce-title">CE1.04 | Respecter les règles métiers</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve d'obtention :</div>
+                                        <div class="proof-text">Validée de manière transversale lors des différentes SAE, à travers toutes les manipulations effectuées en conditions réelles ou simulées, en respectant les normes et protocoles standards.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ce-card">
+                                    <div class="ce-title">CE1.05 | Assurer une veille technologique</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve d'obtention :</div>
+                                        <div class="proof-text">Démontrée initialement dans la SAE 1.01 (découverte de failles), puis dans la SAE 1.02 (mise à jour et amélioration des services). Cette compétence est également centrale dans la SAE 3.03 et la SAE 3.04 (Pentest), où la vigilance face aux failles non corrigées est primordiale.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BUT 1 : Niveau 1 -->
+                    <div class="content-block niveau-section">
+                        <span class="niveau-badge">🎓 BUT 1 : Niveau 1 (Première année)</span>
+                        <h2 class="content-title">
+                            <span class="icon">📚</span>
+                            Apprentissages critiques - Assister l’administrateur du réseau
+                        </h2>
+                        <div class="content-body">
+                            <div class="ac-section">
+                                <div class="ac-card">
+                                    <div class="ac-title">AC11.01 | Maîtriser les lois fondamentales de l'électricité</div>
+                                    <div class="ac-description">Afin d'intervenir sur des équipements de réseaux et télécommunications.</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Obtenue lors de la SAE 1.02 par le choix des équipements réseaux compatibles avec le cahier des charges électrique et physique du client.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC11.02 | Comprendre l'architecture et les fondements des systèmes numériques</div>
+                                    <div class="ac-description">Les principes du codage de l'information, des communications et de l'Internet.</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Obtenue via les recherches théoriques de la SAE 1.01 et la conception de l'architecture réseau de la SAE 1.02.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC11.03 | Configurer les fonctions de base du réseau local</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Validée par la configuration technique des différents équipements actifs (switchs, routeurs) lors de la SAE 1.02.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC11.04 | Maîtriser les rôles et principes des systèmes d'exploitation</div>
+                                    <div class="ac-description">Afin d'interagir avec ceux-ci pour la configuration et l'administration des réseaux et services fournis.</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Acquise via les exposés techniques de la SAE 1.01 et consolidée par la configuration et l'administration du serveur Linux dans la SAE 1.02.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC11.05 | Identifier les dysfonctionnements du réseau local et savoir les signaler</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Obtenue à travers l'analyse des cyber-attaques dans la SAE 1.01 et lors des phases de tests et de débogage du réseau dans la SAE 1.02.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC11.06 | Installer un poste client, expliquer la procédure mise en place</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Validée lors de l'installation et de la configuration des différents postes clients connectés au réseau de la SAE 1.02.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BUT 2 : Niveau 2 -->
+                    <div class="content-block niveau-section">
+                        <span class="niveau-badge">🎓 BUT 2 : Niveau 2 (Deuxième année)</span>
+                        <h2 class="content-title">
+                            <span class="icon">🚀</span>
+                            Apprentissages critiques - Administrer un réseau
+                        </h2>
+                        <div class="content-body">
+                            <div class="ac-section">
+                                <div class="ac-card">
+                                    <div class="ac-title">AC21.01 | Configurer et dépanner le routage dynamique dans un réseau</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Validée lors de la configuration des protocoles de routage RIP, OSPF et BGP dans le cadre de la SAE 3.03.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC21.02 | Configurer et expliquer une politique simple de QoS et de sécurité</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Obtenue lors de la mise en place de l'infrastructure FAI de la SAE 3.03, incluant l'utilisation de MPLS et des VRF.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC21.03 | Déployer des postes clients et des solutions virtualisées</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Validée par la simulation du PC client dans la SAE 3.03, incluant la configuration de la translation d'adresses (NAT) pour vérifier l'accès au web.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC21.04 | Déployer des services réseaux avancés</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Acquise lors de la SAE 3.03 avec la configuration complète de services critiques tels que le DNS, l'Active Directory (AD) et le DHCP.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC21.05 | Identifier les réseaux opérateurs et l'architecture d'Internet</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Correspond à l'ensemble des technologies opérateurs (BGP, MPLS) utilisées dans la configuration du FAI simulé lors de la SAE 3.03.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC21.06 | Travailler en équipe pour développer ses compétences professionnelles</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Compétence transversale acquise lors des projets de groupe, notamment les SAE 3.01 et SAE 3.03.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BUT 3 : Niveau 3 -->
+                    <div class="content-block niveau-section">
+                        <span class="niveau-badge">🎓 BUT 3 : Niveau 3 (Troisième année)</span>
+                        <h2 class="content-title">
+                            <span class="icon">🚀</span>
+                            Apprentissages critiques - Concevoir un réseau 
+                        </h2>
+                        <div class="content-body">
+                            <div class="ac-section">
+                                <div class="ac-card">
+                                    <div class="ac-title">AC31.01 | Concevoir un projet de réseau informatique d’une entreprise en intégrant les problématiques de haute disponibilité, de QoS, de sécurité et de supervision </div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Acquise lors de la conception du système de traçage IoT de la SAE 5.01, intégrant l'architecture réseau LoRaWan avec optimisation énergétique, gestion de la QoS pour les transmissions GNSS et supervision via Node-RED.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC31.02 | Réaliser la documentation technique de ce projet </div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Validée par la réalisation de documentations techniques complètes pour les projets SAE 5.01 (architecture IoT et protocoles) et SAE 5.02 (architecture applicative et base de données), incluant schémas, configurations et procédures d'installation.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC31.03 | Réaliser une maquette de démonstration du projet </div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Obtenue avec la création d'un prototype fonctionnel pour la SAE 5.01 (système embarqué Pycom avec visualisation en temps réel) et pour la SAE 5.02 (application web complète Instravel déployée avec Docker).</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC31.04 | Défendre/argumenter un projet </div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Acquise lors des soutenances orales des projets SAE 5.01 et SAE 5.02, nécessitant d'argumenter les choix techniques, de justifier l'architecture retenue et de démontrer la pertinence des solutions mises en œuvre.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC31.05 | Communiquer avec les acteurs du projet </div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Validée lors de la SAE 4.01 (Stage) par la communication régulière avec le tuteur entreprise et l'équipe technique, ainsi que par les échanges avec l'équipe de développement lors des projets SAE 5.01 et SAE 5.02.</div>
+                                    </div>
+                                </div>
+
+                                <div class="ac-card">
+                                    <div class="ac-title">AC31.06 | Gérer le projet et les différentes étapes de sa mise en œuvre en respectant les délais</div>
+                                    <div class="proof">
+                                        <div class="proof-label">Preuve :</div>
+                                        <div class="proof-text">Compétence transversale acquise lors de la gestion des projets SAE 5.01 et SAE 5.02 en respectant le cahier des charges, les jalons imposés et les deadlines de livraison, ainsi que lors du stage SAE 4.01.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="sidebar-block">
+                        <h3 class="sidebar-title">
+                            <span class="icon">📊</span>
+                            Informations
+                        </h3>
+                        <div class="sidebar-content">
+                            <div class="info-item">
+                                <span class="label">Type</span>
+                                <span class="value">Compétence Commune</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Parcours</span>
+                                <span class="value">BUT R&T</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Composantes Essentielles</span>
+                                <span class="value">5 CE</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">AC Niveau 1</span>
+                                <span class="value">6 AC</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">AC Niveau 2</span>
+                                <span class="value">6 AC</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">AC Niveau 3</span>
+                                <span class="value">6 AC</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-block">
+                        <h3 class="sidebar-title">
+                            <span class="icon">🔗</span>
+                            SAE Associées
+                        </h3>
+                        <div class="sidebar-content">
+                            <ul class="related-list">
+                                <li><a href="../semestre_1/projet-1.html">SAE 1.01 - Hygiène informatique</a></li>
+                                <li><a href="../semestre_1/projet-2.html">SAE 1.02 - Réseau entreprise</a></li>
+                                <li><a href="../semestre_3/projet-1.html">SAE 3.01 - Infrastructure</a></li>
+                                <li><a href="../semestre_3/projet-3.html">SAE 3.03 - FAI et routage</a></li>
+                                <li><a href="../semestre_3/projet-4.html">SAE 3.04 - Pentest</a></li>
+                                <li><a href="../semestre_4/projet-1.html">SAE 4.01 - Stage</a></li>
+                                <li><a href="../semestre_5/projet-1.html">SAE 5.01 - IoT LoRaWan</a></li>
+                                <li><a href="../semestre_5/projet-2.html">SAE 5.02 - Instravel</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Navigation</h3>
+                    <div class="footer-links">
+                        <a href="competences.html">← Retour Compétences</a>
+                        <a href="../../index.html">Switch Principal</a>
+                    </div>
+                </div>
+
+                <div class="footer-section contact-info">
+                    <div class="contact-item">
+                        <span class="icon">📧</span>
+                        <a href="mailto:thibaut.karcher@uha.fr">thibaut.karcher@uha.fr</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">📱</span>
+                        <span>+33 6 08 36 93 45</span>
+                    </div>
+                </div>
+
+                <div class="footer-section social-links">
+                    <a href="https://github.com/ThibautKarcher" target="_blank" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/thibaut-karcher/" target="_blank" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Portfolio Network-Centric | Compétence 1 - Administrer les réseaux et l'internet</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
