@@ -1,0 +1,49 @@
+from scapy.all import *
+import argparse
+from scapy.all import sr1, IP, ICMP
+
+def decouverte_active(ip_cible):
+    response = sr1(IP(dst=ip_cible)/ICMP(), timeout=1, verbose=False)
+    if response:
+        print(f"Hôte {ip_cible} est présent.")
+    else:
+        print(f"Hôte {ip_cible} est absent.")
+
+def decouverte_passive(ip_cible):
+    sniff(prn=lambda x:x.summary(),filter="arp")
+    print(f"Découverte passive pour l'hôte {ip_cible}.")
+
+def decouverte_réseau(adresse_reseau):
+    for i in range(1, 255):
+        ip = f"{adresse_reseau[:-1]}{i}"
+        response = sr1(IP(dst=ip)/ICMP(), timeout=1, verbose=False)
+        if response:
+            print(f"Hôte {ip} est présent.")
+        else:
+            print(f"Hôte {ip} est absent.")
+
+def export_result(nom_dossier, result):
+    with open(nom_dossier, 'w') as file:
+        file.write(result)
+
+def main():
+    parser = argparse.ArgumentParser(description="Script de découverte réseau")
+    parser.add_argument("-a", "--active", metavar="ip_cible", help="Découverte active avec l'adresse IP de l'hôte cible")
+    parser.add_argument("-p", "--passive", metavar="ip_cible", help="Découverte passive avec l'adresse IP de l'hôte cible")
+    parser.add_argument("-t", "--test", metavar="adresse_reseau", help="Test de présence des hôtes d'un réseau avec ICMP")
+    parser.add_argument("-x", "--export", metavar="nom_dossier", help="Exporter le résultat dans un fichier")
+
+    args = parser.parse_args()
+
+    if args.active:
+        decouverte_active(args.active)
+    elif args.passive:
+        decouverte_passive(args.passive)
+    elif args.test:
+        decouverte_réseau(args.test)
+
+    if args.export:
+        export_result(args.export, "Résultat exporté ici.")
+
+if __name__ == "__main__":
+    main()  

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAE 5.01 - Concevoir, réaliser et présenter une solution technique</title>
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/semester.css">
+    <link rel="stylesheet" href="../../styles/project.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../../index.html" style="text-decoration: none;">
+                    <span class="terminal-prompt">root@portfolio:~#</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="semestre-5.html">← Retour Semestre 5</a></li>
+                <li><a href="../../index.html">Switch</a></li>
+                <li><a href="../../index.html#footer">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Project Header -->
+    <section class="project-header-section">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../../index.html">Switch</a>
+                <span class="separator">/</span>
+                <a href="semestre-5.html">VLAN 50</a>
+                <span class="separator">/</span>
+                <span class="current">Projet 1</span>
+            </div>
+
+            <div class="project-header-content">
+                <div class="project-meta">
+                    <span class="project-number">Node 01</span>
+                    <span class="project-status-badge">
+                        <span class="status-dot"></span>
+                        Active
+                    </span>
+                </div>
+
+                <h1 class="project-main-title">SAE 5.01 : Système de traçage de véhicule par GNSS et LoRaWan</h1>
+                
+                <p class="project-subtitle">
+                    Conception d'un système embarqué de géolocalisation autonome utilisant le réseau LoRaWan, avec gestion intelligente de l'énergie et contrôle à distance via Node-RED.
+                </p>
+
+                <div class="project-tags">
+                    <span class="tag">IoT</span>
+                    <span class="tag">LoRaWan</span>
+                    <span class="tag">GNSS</span>
+                    <span class="tag">Pycom</span>
+                    <span class="tag">Node-RED</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="project-content-section">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Main Content -->
+                <div class="main-content">
+                    <!-- Introduction -->
+                    <div class="content-block">
+                        <h2 class="content-title">
+                            <span class="icon">📝</span>
+                            Introduction
+                        </h2>
+                        <div class="content-body">
+                            <p>
+                                L'objectif principal de ce projet est de concevoir un système complet de traçage de véhicule par GNSS. Il s'agit d'utiliser l'environnement Pycom pour transmettre des données de géolocalisation à travers le réseau LoRaWan (via The Things Network), tout en visualisant la position du véhicule sur une carte via un serveur dédié.
+                            </p>
+                            <p>
+                                Une contrainte majeure du projet est l'autonomie énergétique : le système doit consommer le moins possible et ne s'activer que lorsque le véhicule est en mouvement, détecté par l'accéléromètre embarqué.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Apprentissages critiques -->
+                    <div class="content-block">
+                        <h2 class="content-title">
+                            <span class="icon">🎯</span>
+                            Apprentissages critiques concernés
+                        </h2>
+                        <div class="content-body">
+                            <ul class="objectives-list">
+                                <li><strong>AC41.01</strong> : Concevoir une solution IoT de bout en bout</li>
+                                <li><strong>AC41.02</strong> : Implémenter des protocoles de communication LPWAN</li>
+                                <li><strong>AC41.03</strong> : Optimiser la consommation énergétique d'un système embarqué</li>
+                                <li><strong>AC41.04</strong> : Développer une interface de visualisation et de contrôle</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Environnement -->
+                    <div class="content-block">
+                        <h2 class="content-title">
+                            <span class="icon">🛠️</span>
+                            Environnement Matériel et Logiciel
+                        </h2>
+                        <div class="content-body">
+                            <h3>Matériel</h3>
+                            <ul class="objectives-list">
+                                <li><strong>End-Device (Nœud)</strong> : Carte Pytrack couplée à un module Fipy ou Lopy (embarqué dans le véhicule)</li>
+                                <li><strong>Gateway (Passerelle)</strong> : Carte Expansion 3 ou Pysens avec module Fipy/Lopy, ou Gateway TTIG</li>
+                                <li><strong>Serveur</strong> : Raspberry Pi pour l'hébergement de Node-RED</li>
+                                <li><strong>Connectivité</strong> : Antenne LoRa et Clé 2G/3G pour les alertes SMS</li>
+                            </ul>
+
+                            <h3>Logiciel</h3>
+                            <ul class="objectives-list">
+                                <li><strong>IDE</strong> : VS Code avec l'extension Pymakr pour le développement Python</li>
+                                <li><strong>Infrastructure LoRaWan</strong> : The Things Network (TTN) pour la gestion du réseau</li>
+                                <li><strong>Visualisation & Backend</strong> : Node-RED installé sur Raspberry Pi pour le tableau de bord et la cartographie</li>
+                                <li><strong>Protocoles</strong> : MQTT pour la communication machine-to-machine</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Sujet -->
+                    <div class="content-block">
+                        <h2 class="content-title">
+                            <span class="icon">🔍</span>
+                            Sujet du projet
+                        </h2>
+                        <div class="content-body">
+                            <p>
+                                Dans un contexte de système embarqué où l'autonomie sur batterie est critique, le dispositif doit alterner intelligemment entre des modes de veille (Deep Sleep) et d'activité.
+                            </p>
+                            <p>
+                                L'électronique ne doit se réveiller pour transmettre sa position GNSS que lorsque l'accéléromètre détecte un déplacement du véhicule. Le système doit également être pilotable à distance (via une page web) et capable d'envoyer des notifications (SMS) à l'utilisateur.
+                            </p>
+                            <p>
+                                Les contraintes principales incluent :
+                            </p>
+                            <ul class="objectives-list">
+                                <li>Respect des limitations de temps d'antenne (Airtime) du réseau LoRaWan</li>
+                                <li>Optimisation de la charge utile (Payload) pour minimiser la bande passante</li>
+                                <li>Gestion énergétique via deep sleep et interruptions matérielles</li>
+                                <li>Communication bidirectionnelle (uplink/downlink) avec le dispositif</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Déroulé et organisation -->
+                    <div class="content-block">
+                        <h2 class="content-title">
+                            <span class="icon">⚙️</span>
+                            Déroulé et Validations du projet
+                        </h2>
+                        <div class="content-body">
+                            <h3>1. Initialisation et Protocoles de base</h3>
+                            <p>
+                                La première étape consiste à valider la chaîne de transmission hors LoRaWan. Nous avons envoyé des coordonnées de géolocalisation depuis le End-Device via une connexion WiFi en utilisant le protocole MQTT, pour ensuite les visualiser sur une carte via Node-RED.
+                            </p>
+
+                            <h3>2. Intégration LoRaWan (The Things Network)</h3>
+                            <p>
+                                Nous avons ensuite créé une Application et configuré une Gateway sur TTN. L'objectif était de faire transiter les messages depuis notre équipement vers le réseau LoRaWan en respectant les contraintes de temps d'antenne (Airtime).
+                            </p>
+
+                            <h3>3. Optimisation et Formatage des données</h3>
+                            <p>
+                                Pour réduire la consommation de bande passante, nous avons optimisé la charge utile (Payload) en codant la latitude et la longitude sur 3 octets chacune. Côté réception (TTN), un décodage JSON a été mis en place pour rendre les données exploitables par le broker MQTT et Node-RED.
+                            </p>
+
+                            <h3>4. Gestion de l'Énergie (Smart Tracking)</h3>
+                            <p>
+                                Cette phase cruciale consistait à implémenter la mise en veille profonde ("deep sleep") du module par défaut. Le réveil du système et la connexion au réseau ne se déclenchent que sur une interruption générée par l'accéléromètre lors d'un mouvement du véhicule.
+                            </p>
+
+                            <h3>5. Contrôle à distance et Notifications</h3>
+                            <p>
+                                Pour finaliser la solution, nous avons mis en place :
+                            </p>
+                            <ul class="objectives-list">
+                                <li><strong>Downlink</strong> : La possibilité d'arrêter le suivi et de forcer la mise en veille depuis l'interface web (message descendant vers le module)</li>
+                                <li><strong>Alertes SMS</strong> : L'utilisation d'une clé 2G/3G connectée au Raspberry Pi pour envoyer un SMS à l'utilisateur dès que le véhicule se déplace ou pour confirmer sa mise en veille</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Compétences développées -->
+                    <div class="content-block">
+                        <h2 class="content-title">
+                            <span class="icon">💡</span>
+                            Compétences développées
+                        </h2>
+                        <div class="content-body">
+                            <div class="skills-acquired">
+                                <div class="skill-item">
+                                    <strong>Systèmes embarqués IoT</strong>
+                                    <p>Développement sur plateforme Pycom avec gestion des capteurs GNSS et accéléromètre</p>
+                                </div>
+                                <div class="skill-item">
+                                    <strong>Réseaux LPWAN</strong>
+                                    <p>Configuration et utilisation du réseau LoRaWan via The Things Network</p>
+                                </div>
+                                <div class="skill-item">
+                                    <strong>Optimisation énergétique</strong>
+                                    <p>Implémentation du mode Deep Sleep et gestion des interruptions matérielles</p>
+                                </div>
+                                <div class="skill-item">
+                                    <strong>Protocoles de communication</strong>
+                                    <p>Maîtrise de MQTT pour la communication M2M et intégration broker</p>
+                                </div>
+                                <div class="skill-item">
+                                    <strong>Visualisation de données</strong>
+                                    <p>Création d'un dashboard Node-RED avec cartographie en temps réel</p>
+                                </div>
+                                <div class="skill-item">
+                                    <strong>Communication bidirectionnelle</strong>
+                                    <p>Mise en place du downlink LoRaWan et d'alertes SMS via clé 2G/3G</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ressources académiques -->
+                    <div class="content-block">
+                        <h2 class="content-title">
+                            <span class="icon">📚</span>
+                            Ressources académiques associées
+                        </h2>
+                        <div class="content-body">
+                            <ul class="results-list">
+                                <li><strong>R5.01</strong> | Objets connectés et réseaux IoT</li>
+                                <li><strong>R5.02</strong> | Protocoles de communication LPWAN</li>
+                                <li><strong>R5.03</strong> | Systèmes embarqués et microcontrôleurs</li>
+                                <li><strong>R5.04</strong> | Gestion de l'énergie dans les systèmes autonomes</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Documents et traces -->
+                    <div class="content-block">
+                        <h2 class="content-title">
+                            <span class="icon">📁</span>
+                            Documents et traces
+                        </h2>
+                        <div class="content-body">
+                            <div class="skills-acquired">
+                                <div class="skill-item">
+                                    <strong>Sujet du projet</strong>
+                                    <p>Projet_LoraWan_SAE501_FI - 2026.pdf</p>
+                                </div>
+                                <div class="skill-item">
+                                    <strong>Scripts Python</strong>
+                                    <p>Codes sources du Pytrack/Lopy pour la gestion du GNSS et du deep sleep</p>
+                                </div>
+                                <div class="skill-item">
+                                    <strong>Flux Node-RED</strong>
+                                    <p>Fichier de configuration du dashboard avec cartographie et contrôles</p>
+                                </div>
+                                <div class="skill-item">
+                                    <strong>Configuration TTN</strong>
+                                    <p>Documentation de l'application et des paramètres de décodage payload</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <!-- Project Info Card -->
+                    <div class="info-card">
+                        <h3 class="info-title">Informations Projet</h3>
+                        <div class="info-content">
+                            <div class="info-item">
+                                <span class="info-label">Code</span>
+                                <span class="info-value">SAE 5.01</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Semestre</span>
+                                <span class="info-value">5</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Type</span>
+                                <span class="info-value">IoT & Systèmes Embarqués</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Durée</span>
+                                <span class="info-value">Projet semestriel</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Status</span>
+                                <span class="info-value status-success">Complété</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technologies utilisées -->
+                    <div class="info-card">
+                        <h3 class="info-title">Technologies utilisées</h3>
+                        <div class="tech-stack">
+                            <div class="tech-item">
+                                <span class="tech-icon">📡</span>
+                                <div>
+                                    <strong>Pycom Fipy/Lopy</strong>
+                                    <p>Module IoT avec LoRaWan et GNSS</p>
+                                </div>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-icon">🌐</span>
+                                <div>
+                                    <strong>The Things Network</strong>
+                                    <p>Infrastructure LoRaWan</p>
+                                </div>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-icon">🐍</span>
+                                <div>
+                                    <strong>MicroPython</strong>
+                                    <p>Programmation embarquée</p>
+                                </div>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-icon">📊</span>
+                                <div>
+                                    <strong>Node-RED</strong>
+                                    <p>Dashboard et visualisation</p>
+                                </div>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-icon">💬</span>
+                                <div>
+                                    <strong>MQTT</strong>
+                                    <p>Protocole de messaging</p>
+                                </div>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-icon">🍓</span>
+                                <div>
+                                    <strong>Raspberry Pi</strong>
+                                    <p>Serveur embarqué</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Links -->
+                    <div class="info-card">
+                        <h3 class="info-title">Livrables du projet</h3>
+                        <div class="resource-links">
+                            <a href="#" class="resource-link">
+                                <span class="icon">📄</span>
+                                Sujet du projet
+                            </a>
+                            <a href="#" class="resource-link">
+                                <span class="icon">💻</span>
+                                Scripts Python
+                            </a>
+                            <a href="#" class="resource-link">
+                                <span class="icon">🗺️</span>
+                                Flux Node-RED
+                            </a>
+                            <a href="#" class="resource-link">
+                                <span class="icon">📊</span>
+                                Dashboard de traçage
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Navigation -->
+                    <div class="info-card">
+                        <h3 class="info-title">Navigation</h3>
+                        <div class="project-navigation">
+                            <a href="semestre-5.html" class="nav-btn">
+                                ← Tous les projets
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Navigation</h3>
+                    <div class="footer-links">
+                        <a href="semestre-5.html">← Retour Semestre 5</a>
+                        <a href="../../index.html">Switch Principal</a>
+                    </div>
+                </div>
+
+                <div class="footer-section contact-info">
+                    <div class="contact-item">
+                        <span class="icon">📧</span>
+                        <a href="mailto:thibaut.karcher@uha.fr">thibaut.karcher@uha.fr</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">📱</span>
+                        <span>+33 6 08 36 93 45</span>
+                    </div>
+                </div>
+
+                <div class="footer-section social-links">
+                    <a href="https://github.com/ThibautKarcher" target="_blank" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/thibaut-karcher/" target="_blank" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Portfolio Network-Centric | Semestre 5 - Node 01</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

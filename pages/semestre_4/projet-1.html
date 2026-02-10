@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAE 4.01 - Créer un réseau d'entreprise sécurisé</title>
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/semester.css">
+    <link rel="stylesheet" href="../../styles/project.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../../index.html" style="text-decoration: none;">
+                    <span class="terminal-prompt">root@portfolio:~#</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="semestre-4.html">← Retour Semestre 4</a></li>
+                <li><a href="../../index.html">Switch</a></li>
+                <li><a href="../../index.html#footer">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Project Header -->
+    <section class="project-header-section">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../../index.html">Switch</a>
+                <span class="separator">/</span>
+                <a href="semestre-4.html">VLAN 40</a>
+                <span class="separator">/</span>
+                <span class="current">Projet 1</span>
+            </div>
+
+            <div class="project-header-content">
+                <div class="project-meta">
+                    <span class="project-number">Node 01</span>
+                    <span class="project-status-badge">
+                        <span class="status-dot"></span>
+                        Active
+                    </span>
+                </div>
+
+                <h1 class="project-main-title">SAE 4.01 : Créer un réseau d'entreprise sécurisé</h1>
+                
+                <p class="project-subtitle">
+                    Conception et administration d'une infrastructure réseau complète et sécurisée avec pare-feu, annuaire LDAP, services de messagerie, VPN et haute disponibilité.
+                </p>
+
+                <div class="project-tags">
+                    <span class="tag">Infrastructure</span>
+                    <span class="tag">LDAP</span>
+                    <span class="tag">VPN</span>
+                    <span class="tag">PKI/IGC</span>
+                    <span class="tag">Haute Disponibilité</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="project-content-section">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Main Content -->
+                <div class="main-content">
+                    <!-- Introduction -->
+                    <div class="content-block">
+                        <h2 class="content-title">
+                            <span class="icon">📝</span>
+                            Introduction
+                        </h2>
+                        <div class="content-body">
+                            <p>
+                                L'objectif principal de cette SAE est de créer un réseau d'entreprise sécurisé. Le projet impose la mise en place d'une infrastructure complète incluant un pare-feu, un annuaire LDAP pour l'authentification, un service de partage de fichiers NFS, ainsi qu'un service de messagerie et un accès VPN pour les postes nomades.
+                            </p>
+                            <p>
+                                Une attention particulière est portée à la création d'une infrastructure de gestion de clés (IGC) pour sécuriser les protocoles par TLS et authentifier les accès distants.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Apprentissages critiques -->
+                    <div class="content-block">
+                        <h2 class="content-title">
+                            <span class="icon">🎯</span>
+                            Apprentissages critiques concernés
+                        </h2>
+                        <div class="content-body">
+                            <ul class="objectives-list">
+                                <li><strong>AC31.01</strong> : Concevoir et déployer une infrastructure réseau sécurisée</li>
+                                <li><strong>AC31.02</strong> : Mettre en place une authentification centralisée</li>
+                                <li><strong>AC31.03</strong> : Administrer des services réseau critiques</li>
+                                <li><strong>AC31.04</strong> : Configurer une infrastructure de gestion de clés (PKI)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Sujet -->
+                    <div class="content-block">
+                        <h2 class="content-title">
+                            <span class="icon">🔍</span>
+                            Sujet du projet
+                        </h2>
+                        <div class="content-body">
+                            <p>
+                                Le projet consiste à concevoir et administrer une infrastructure réseau robuste. Le schéma de principe s'articule autour d'un pare-feu (FW) assurant l'interface entre le WAN et le réseau interne.
+                            </p>
+                            <p>
+                                Ce réseau héberge l'ensemble des services critiques :
+                            </p>
+                            <ul class="objectives-list">
+                                <li><strong>DNS</strong> : résolution de noms de domaine</li>
+                                <li><strong>LDAP</strong> : annuaire centralisé pour l'authentification</li>
+                                <li><strong>NFS</strong> : partage de fichiers réseau</li>
+                                <li><strong>Messagerie</strong> : Postfix (SMTP) et Dovecot (IMAP/POP)</li>
+                                <li><strong>Service Web</strong> : en haute-disponibilité avec loadbalancing</li>
+                                <li><strong>OpenVPN</strong> : accès sécurisé pour les postes nomades</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Déroulé et organisation -->
+                    <div class="content-block">
+                        <h2 class="content-title">
+                            <span class="icon">⚙️</span>
+                            Déroulé et organisation du projet
+                        </h2>
+                        <div class="content-body">
+                            <p>
+                                Le projet est réalisé en groupe de 3 étudiants, avec une liberté de choix technique pour répondre aux exigences du cahier des charges.
+                            </p>
+
+                            <h3>1. Planification et mise en place du Lab</h3>
+                            <p>
+                                La première étape consiste à définir un plan d'adressage IP rigoureux et à préparer l'environnement virtuel sous Virtualbox avec des machines virtuelles Linux Debian.
+                            </p>
+
+                            <h3>2. Configuration des services d'infrastructure</h3>
+                            <p>
+                                Cette phase inclut la mise en place du pare-feu et du serveur DNS (BIND9). Parallèlement, l'Infrastructure de Gestion de Clés (IGC/PKI) est déployée pour générer les certificats racine, serveur et client indispensables à la sécurisation des échanges.
+                            </p>
+
+                            <h3>3. Gestion de l'authentification et du partage de fichiers</h3>
+                            <p>
+                                Il s'agit ensuite d'initialiser l'annuaire LDAP et de configurer l'authentification centralisée pour le serveur Debian et le service de partage de fichiers NFS. La sécurisation de LDAP par TLS (LDAPs) est mise en place.
+                            </p>
+
+                            <h3>4. Déploiement de la messagerie et du VPN</h3>
+                            <p>
+                                Configuration sécurisée des serveurs Postfix (SMTP) et Dovecot (IMAP) utilisant l'annuaire LDAP pour l'authentification. En complément, le serveur OpenVPN est configuré pour permettre l'accès sécurisé aux postes nomades, avec une gestion précise du filtrage et du routage.
+                            </p>
+
+                            <h3>5. Services Web et Haute-Disponibilité</h3>
+                            <p>
+                                La dernière étape logicielle concerne l'installation d'un service Web sécurisé en HTTPS (Apache2 ou Nginx), l'implémentation de la haute-disponibilité par loadbalancing et la mise en place d'un proxy authentifiant (Squid).
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Compétences développées -->
+                    <div class="content-block">
+                        <h2 class="content-title">
+                            <span class="icon">💡</span>
+                            Compétences développées
+                        </h2>
+                        <div class="content-body">
+                            <div class="skills-acquired">
+                                <div class="skill-item">
+                                    <strong>Infrastructure de sécurité</strong>
+                                    <p>Déploiement complet d'une PKI (IGC) avec génération et gestion de certificats TLS</p>
+                                </div>
+                                <div class="skill-item">
+                                    <strong>Authentification centralisée</strong>
+                                    <p>Configuration d'un annuaire LDAP sécurisé (LDAPs) pour l'authentification des services</p>
+                                </div>
+                                <div class="skill-item">
+                                    <strong>Services réseau critiques</strong>
+                                    <p>Administration de DNS, messagerie (Postfix/Dovecot), NFS et services web</p>
+                                </div>
+                                <div class="skill-item">
+                                    <strong>Haute disponibilité</strong>
+                                    <p>Mise en place de loadbalancing et redondance pour assurer la continuité de service</p>
+                                </div>
+                                <div class="skill-item">
+                                    <strong>Accès distant sécurisé</strong>
+                                    <p>Configuration d'OpenVPN avec authentification par certificats et gestion du routage</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ressources académiques -->
+                    <div class="content-block">
+                        <h2 class="content-title">
+                            <span class="icon">📚</span>
+                            Ressources académiques associées
+                        </h2>
+                        <div class="content-body">
+                            <ul class="results-list">
+                                <li><strong>R4.01</strong> | Administration des systèmes d'exploitation</li>
+                                <li><strong>R4.02</strong> | Services réseau avancés</li>
+                                <li><strong>R4.03</strong> | Sécurité des systèmes et des réseaux</li>
+                                <li><strong>R4.04</strong> | Architectures et protocoles de sécurité</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Documents et traces -->
+                    <div class="content-block">
+                        <h2 class="content-title">
+                            <span class="icon">📁</span>
+                            Documents et traces
+                        </h2>
+                        <div class="content-body">
+                            <div class="skills-acquired">
+                                <div class="skill-item">
+                                    <strong>Démonstration vidéo</strong>
+                                    <p>Réalisation d'une démo vidéo du système fonctionnel montrant tous les services</p>
+                                </div>
+                                <div class="skill-item">
+                                    <strong>Soutenance technique</strong>
+                                    <p>Présentation de 20 minutes incluant l'argumentation des choix et les schémas détaillés</p>
+                                </div>
+                                <div class="skill-item">
+                                    <strong>Documentation technique</strong>
+                                    <p>Plan d'adressage, schémas réseau et procédures de configuration</p>
+                                </div>
+                                <div class="skill-item">
+                                    <strong>Évaluation des risques</strong>
+                                    <p>Analyse de sécurité et recommandations pour l'infrastructure déployée</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <!-- Project Info Card -->
+                    <div class="info-card">
+                        <h3 class="info-title">Informations Projet</h3>
+                        <div class="info-content">
+                            <div class="info-item">
+                                <span class="info-label">Code</span>
+                                <span class="info-value">SAE 4.01</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Semestre</span>
+                                <span class="info-value">4</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Type</span>
+                                <span class="info-value">Infrastructure & Sécurité</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Groupe</span>
+                                <span class="info-value">3 étudiants</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Status</span>
+                                <span class="info-value status-success">Complété</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technologies utilisées -->
+                    <div class="info-card">
+                        <h3 class="info-title">Technologies utilisées</h3>
+                        <div class="tech-stack">
+                            <div class="tech-item">
+                                <span class="tech-icon">🐧</span>
+                                <div>
+                                    <strong>Linux Debian</strong>
+                                    <p>Système d'exploitation serveur</p>
+                                </div>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-icon">🔐</span>
+                                <div>
+                                    <strong>LDAP/LDAPs</strong>
+                                    <p>Annuaire centralisé</p>
+                                </div>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-icon">🔑</span>
+                                <div>
+                                    <strong>PKI/IGC</strong>
+                                    <p>Infrastructure à clés publiques</p>
+                                </div>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-icon">📧</span>
+                                <div>
+                                    <strong>Postfix/Dovecot</strong>
+                                    <p>Serveurs de messagerie</p>
+                                </div>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-icon">🌐</span>
+                                <div>
+                                    <strong>Apache/Nginx</strong>
+                                    <p>Serveurs web avec loadbalancing</p>
+                                </div>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-icon">🔒</span>
+                                <div>
+                                    <strong>OpenVPN</strong>
+                                    <p>VPN pour accès distant</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Links -->
+                    <div class="info-card">
+                        <h3 class="info-title">Livrables du projet</h3>
+                        <div class="resource-links">
+                            <a href="#" class="resource-link">
+                                <span class="icon">🎥</span>
+                                Démonstration vidéo
+                            </a>
+                            <a href="#" class="resource-link">
+                                <span class="icon">📊</span>
+                                Présentation soutenance
+                            </a>
+                            <a href="#" class="resource-link">
+                                <span class="icon">📐</span>
+                                Schémas réseau
+                            </a>
+                            <a href="#" class="resource-link">
+                                <span class="icon">📖</span>
+                                Documentation technique
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Navigation -->
+                    <div class="info-card">
+                        <h3 class="info-title">Navigation</h3>
+                        <div class="project-navigation">
+                            <a href="semestre-4.html" class="nav-btn">
+                                ← Tous les projets
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Navigation</h3>
+                    <div class="footer-links">
+                        <a href="semestre-4.html">← Retour Semestre 4</a>
+                        <a href="../../index.html">Switch Principal</a>
+                    </div>
+                </div>
+
+                <div class="footer-section contact-info">
+                    <div class="contact-item">
+                        <span class="icon">📧</span>
+                        <a href="mailto:thibaut.karcher@uha.fr">thibaut.karcher@uha.fr</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">📱</span>
+                        <span>+33 6 08 36 93 45</span>
+                    </div>
+                </div>
+
+                <div class="footer-section social-links">
+                    <a href="https://github.com/ThibautKarcher" target="_blank" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/thibaut-karcher/" target="_blank" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Portfolio Network-Centric | Semestre 4 - Node 01</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

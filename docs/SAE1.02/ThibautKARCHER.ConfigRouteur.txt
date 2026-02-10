@@ -1,0 +1,130 @@
+!
+! Last configuration change at 21:23:27 EET Thu Feb 1 2024
+!
+version 15.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname Router
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+clock timezone EET 2 0
+mmi polling-interval 60
+no mmi auto-configure
+no mmi pvc
+mmi snmp-timeout 180
+!
+!
+!
+!
+!
+!
+!
+!
+
+
+!
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+!
+!
+redundancy
+!
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Ethernet0/0
+ no shutdown
+ no ip address
+!
+interface Ethernet0/0.1
+ no shutdown
+ encapsulation dot1Q 10
+ ip address 172.20.57.62 255.255.255.224
+!
+interface Ethernet0/0.2
+ no shutdown
+ encapsulation dot1Q 20
+ ip address 172.20.57.30 255.255.255.224
+!
+interface Ethernet0/0.3
+ no shutdown
+ encapsulation dot1Q 30
+ ip address 172.20.57.94 255.255.255.224
+!
+interface Ethernet0/0.4
+ no shutdown
+ encapsulation dot1Q 40
+ ip address 172.20.57.126 255.255.255.224
+!
+interface Ethernet0/1
+ no shutdown
+ no ip address
+ shutdown
+!
+interface Ethernet0/2
+ no shutdown
+ no ip address
+ shutdown
+!
+interface Ethernet0/3
+ no shutdown
+ no ip address
+ shutdown
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+control-plane
+!
+!
+!
+!
+!
+!
+!
+!
+line con 0
+ logging synchronous
+line aux 0
+line vty 0 4
+ login
+ transport input none
+!
+!
+end

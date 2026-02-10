@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stage - Installation d'outils pour serveurs de calculs</title>
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/semester.css">
+    <link rel="stylesheet" href="../../styles/project.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../../index.html" style="text-decoration: none;">
+                    <span class="terminal-prompt">root@portfolio:~#</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="semestre-2.html">← Retour Semestre 2</a></li>
+                <li><a href="../../index.html">Switch</a></li>
+                <li><a href="../../index.html#footer">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Project Header -->
+    <section class="project-header-section">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../../index.html">Switch</a>
+                <span class="separator">/</span>
+                <a href="semestre-2.html">VLAN 20</a>
+                <span class="separator">/</span>
+                <span class="current">Stage</span>
+            </div>
+
+            <div class="project-header-content">
+                <div class="project-meta">
+                    <span class="project-number">Node 03</span>
+                    <span class="project-status-badge">
+                        <span class="status-dot"></span>
+                        Active
+                    </span>
+                </div>
+
+                <h1 class="project-main-title">Stage 2ème année : Installation d'outils pour serveurs de calculs</h1>
+                
+                <p class="project-subtitle">
+                    Déploiement d'une solution Nextcloud sur Ubuntu Server pour le stockage et la gestion des données de l'équipe de recherche RT à l'IUT de Colmar.
+                </p>
+
+                <div class="project-tags">
+                    <span class="tag">Nextcloud</span>
+                    <span class="tag">Ubuntu Server</span>
+                    <span class="tag">Apache2</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag">Administration Système</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="project-content-section">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Main Content -->
+                <div class="main-content">
+                    <!-- Introduction -->
+                    <div class="content-block">
+                        <h2 class="content-title">
+                            <span class="icon">📝</span>
+                            Sujet du stage
+                        </h2>
+                        <div class="content-body">
+                            <p>
+                                Lors de la 2ème année de BUT, j'ai eu l'occasion de faire un stage obligatoire d'un mois (normalement 2 mais à cause de difficultés lors de la recherche de stage j'ai dû écourter celui-ci).
+                            </p>
+                            <p>
+                                J'ai donc fait mon stage à l'IUT de Colmar au sein de l'équipe de recherche RT. Le but de mon stage était l'installation d'outils pour serveurs de calculs, notamment l'installation d'un serveur de stockage avec le logiciel Nextcloud dans le but de stocker les résultats du serveur de calculs ou autres données importantes.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Apprentissages critiques -->
+                    <div class="content-block">
+                        <h2 class="content-title">
+                            <span class="icon">🎯</span>
+                            Apprentissages critiques concernés
+                        </h2>
+                        <div class="content-body">
+                            <ul class="objectives-list">
+                                <li><strong>AC23.02</strong> : Développer une application à partir d'un cahier des charges donné, pour le Web ou les périphériques mobiles</li>
+                                <li><strong>AC23.03</strong> : Utiliser un protocole réseau pour programmer une application client/serveur</li>
+                                <li><strong>AC23.04</strong> : Installer, administrer un système de gestion de données</li>
+                                <li><strong>AC23.05</strong> : Accéder à un ensemble de données depuis une application et/ou un site web</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Contexte du stage -->
+                    <div class="content-block">
+                        <h2 class="content-title">
+                            <span class="icon">🏢</span>
+                            Contexte du stage
+                        </h2>
+                        <div class="content-body">
+                            <p>
+                                Le stage s'est déroulé au sein de l'équipe de recherche RT de l'IUT de Colmar. Cette équipe dispose de serveurs de calculs pour mener ses recherches et avait besoin d'une solution de stockage centralisée et sécurisée pour archiver les résultats de calculs et autres données importantes.
+                            </p>
+                            <p>
+                                La solution devait être :
+                            </p>
+                            <ul class="objectives-list">
+                                <li>Auto-hébergée pour garantir la confidentialité des données de recherche</li>
+                                <li>Accessible via une interface web pour faciliter la gestion</li>
+                                <li>Robuste et fiable pour assurer la pérennité des données</li>
+                                <li>Facile à administrer et à maintenir</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Déroulé et organisation -->
+                    <div class="content-block">
+                        <h2 class="content-title">
+                            <span class="icon">⚙️</span>
+                            Déroulé du stage
+                        </h2>
+                        <div class="content-body">
+                            <h3>1. Recherche et choix de l'environnement</h3>
+                            <p>
+                                Lors de ce stage, j'ai tout d'abord effectué un travail de recherche afin de déterminer le meilleur choix de configuration pour le serveur (choix de l'OS, format de disque à utiliser, etc.).
+                            </p>
+                            <p>
+                                Dans notre cas, le choix d'Ubuntu Server a été fait car l'installation de Nextcloud est très simple à effectuer sur cet OS et car Ubuntu est fondé sur la base de Debian qui est une distribution que je connais assez bien. Il était donc plus simple et plus efficace de travailler sur cet OS dans mon cas.
+                            </p>
+
+                            <h3>2. Installation et Déploiement</h3>
+                            <p>
+                                Il a ensuite fallu passer à l'installation de Nextcloud et ses dépendances. Nextcloud est un logiciel libre permettant l'auto-hébergement / stockage et le partage de fichiers via une interface web / application.
+                            </p>
+                            <p>
+                                Les principales étapes d'installation ont inclus :
+                            </p>
+                            <ul class="objectives-list">
+                                <li>Installation des prérequis système (PHP, extensions requises)</li>
+                                <li>Configuration des permissions et de l'environnement</li>
+                                <li>Déploiement de Nextcloud et configuration initiale</li>
+                            </ul>
+
+                            <h3>3. Configuration des services Web et BDD</h3>
+                            <p>
+                                Nextcloud ayant une interface web intégrée, il a donc aussi fallu installer et configurer un service web (Apache2) afin de pouvoir accéder aux différentes pages fournies par Nextcloud. Il fallait aussi installer et créer une base de données MySQL pour gérer les utilisateurs notamment.
+                            </p>
+                            <p>
+                                Points clés de cette phase :
+                            </p>
+                            <ul class="objectives-list">
+                                <li>Configuration d'Apache2 avec les modules nécessaires</li>
+                                <li>Sécurisation des accès et configuration HTTPS</li>
+                                <li>Création et configuration de la base de données MySQL</li>
+                                <li>Optimisation des performances du serveur web</li>
+                            </ul>
+
+                            <h3>4. Administration avancée</h3>
+                            <p>
+                                La configuration de Nextcloud peut se faire de plusieurs façons, soit via le fichier de config "config.php" ou alors via les commandes occ ("OwnCloudCommand").
+                            </p>
+                            <p>
+                                J'ai aussi eu l'occasion de voir le fonctionnement ainsi que la mise en place de la gestion de quota sous Ubuntu afin d'éviter tout problème de saturation de stockage (par utilisateur ou total), ainsi que l'activation du Wake-on-LAN qui permet l'allumage à distance du serveur même éteint.
+                            </p>
+
+                            <h3>5. Documentation</h3>
+                            <p>
+                                Pour finir, j'ai réécrit une documentation d'installation afin de lister chaque commande tapée et de décrire l'installation dans les détails afin de pouvoir la refaire sans problème si besoin.
+                            </p>
+                            <p>
+                                Cette documentation complète permet à l'équipe de recherche de :
+                            </p>
+                            <ul class="objectives-list">
+                                <li>Reproduire l'installation en cas de besoin</li>
+                                <li>Comprendre l'architecture mise en place</li>
+                                <li>Effectuer la maintenance et les mises à jour</li>
+                                <li>Former de nouveaux administrateurs</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Compétences développées -->
+                    <div class="content-block">
+                        <h2 class="content-title">
+                            <span class="icon">💡</span>
+                            Compétences développées
+                        </h2>
+                        <div class="content-body">
+                            <div class="skills-acquired">
+                                <div class="skill-item">
+                                    <strong>Administration système Linux</strong>
+                                    <p>Maîtrise d'Ubuntu Server, gestion des utilisateurs, permissions et quotas de stockage</p>
+                                </div>
+                                <div class="skill-item">
+                                    <strong>Services Web</strong>
+                                    <p>Installation et configuration d'Apache2, optimisation des performances</p>
+                                </div>
+                                <div class="skill-item">
+                                    <strong>Gestion de bases de données</strong>
+                                    <p>Déploiement et administration de MySQL, conception de schémas de données</p>
+                                </div>
+                                <div class="skill-item">
+                                    <strong>Solutions Cloud auto-hébergées</strong>
+                                    <p>Expertise Nextcloud, configuration avancée via config.php et commandes occ</p>
+                                </div>
+                                <div class="skill-item">
+                                    <strong>Gestion de projet</strong>
+                                    <p>Recherche de solutions, planification, documentation technique complète</p>
+                                </div>
+                                <div class="skill-item">
+                                    <strong>Fonctionnalités avancées</strong>
+                                    <p>Wake-on-LAN, gestion de quotas, sécurisation des accès</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Résultats et livrables -->
+                    <div class="content-block">
+                        <h2 class="content-title">
+                            <span class="icon">📁</span>
+                            Résultats et livrables
+                        </h2>
+                        <div class="content-body">
+                            <div class="skills-acquired">
+                                <div class="skill-item">
+                                    <strong>Serveur Nextcloud opérationnel</strong>
+                                    <p>Solution de stockage entièrement fonctionnelle et accessible via interface web</p>
+                                </div>
+                                <div class="skill-item">
+                                    <strong>Documentation technique complète</strong>
+                                    <p>Guide d'installation détaillé avec toutes les commandes et configurations</p>
+                                </div>
+                                <div class="skill-item">
+                                    <strong>Configuration sécurisée</strong>
+                                    <p>Gestion des quotas, Wake-on-LAN, sécurisation des accès</p>
+                                </div>
+                                <div class="skill-item">
+                                    <strong>Infrastructure pérenne</strong>
+                                    <p>Système maintainable et évolutif pour l'équipe de recherche</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <!-- Project Info Card -->
+                    <div class="info-card">
+                        <h3 class="info-title">Informations Stage</h3>
+                        <div class="info-content">
+                            <div class="info-item">
+                                <span class="info-label">Type</span>
+                                <span class="info-value">Stage 2ème année</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Durée</span>
+                                <span class="info-value">1 mois</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Lieu</span>
+                                <span class="info-value">IUT de Colmar</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Équipe</span>
+                                <span class="info-value">Recherche RT</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Status</span>
+                                <span class="info-value status-success">Complété</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technologies utilisées -->
+                    <div class="info-card">
+                        <h3 class="info-title">Technologies utilisées</h3>
+                        <div class="tech-stack">
+                            <div class="tech-item">
+                                <span class="tech-icon">🐧</span>
+                                <div>
+                                    <strong>Ubuntu Server</strong>
+                                    <p>Système d'exploitation</p>
+                                </div>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-icon">☁️</span>
+                                <div>
+                                    <strong>Nextcloud</strong>
+                                    <p>Plateforme de stockage</p>
+                                </div>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-icon">🌐</span>
+                                <div>
+                                    <strong>Apache2</strong>
+                                    <p>Serveur web</p>
+                                </div>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-icon">🗄️</span>
+                                <div>
+                                    <strong>MySQL</strong>
+                                    <p>Base de données</p>
+                                </div>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-icon">🐘</span>
+                                <div>
+                                    <strong>PHP</strong>
+                                    <p>Langage serveur</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Missions principales -->
+                    <div class="info-card">
+                        <h3 class="info-title">Missions principales</h3>
+                        <div class="resource-links">
+                            <div class="resource-link">
+                                <span class="icon">🔍</span>
+                                Recherche et veille technologique
+                            </div>
+                            <div class="resource-link">
+                                <span class="icon">⚙️</span>
+                                Installation et configuration
+                            </div>
+                            <div class="resource-link">
+                                <span class="icon">🔧</span>
+                                Administration système
+                            </div>
+                            <div class="resource-link">
+                                <span class="icon">📝</span>
+                                Rédaction de documentation
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation -->
+                    <div class="info-card">
+                        <h3 class="info-title">Navigation</h3>
+                        <div class="project-navigation">
+                            <a href="semestre-2.html" class="nav-btn">
+                                ← Tous les projets
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Navigation</h3>
+                    <div class="footer-links">
+                        <a href="semestre-2.html">← Retour Semestre 2</a>
+                        <a href="../../index.html">Switch Principal</a>
+                    </div>
+                </div>
+
+                <div class="footer-section contact-info">
+                    <div class="contact-item">
+                        <span class="icon">📧</span>
+                        <a href="mailto:thibaut.karcher@uha.fr">thibaut.karcher@uha.fr</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">📱</span>
+                        <span>+33 6 08 36 93 45</span>
+                    </div>
+                </div>
+
+                <div class="footer-section social-links">
+                    <a href="https://github.com/ThibautKarcher" target="_blank" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/thibaut-karcher/" target="_blank" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Portfolio Network-Centric | Semestre 2 - Stage</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

